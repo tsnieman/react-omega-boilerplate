@@ -29,3 +29,4 @@ Discussion/PR: https://github.com/facebook/react/pull/6020
 - [ ] error system (well, more like a general 'alert' system)
 - add explanations about each tech in [Pieces section](#Pieces)
 - testing
+- test the prod config. (is probably very broken; the files are split where there should be differences for the most part, though)

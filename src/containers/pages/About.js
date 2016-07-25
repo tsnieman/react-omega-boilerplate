@@ -9,7 +9,7 @@ import AboutPage from 'components/pages/About';
 
 const AboutContainer = () => <AboutPage />;
 
-function mapStateToProps() {
+function mapStateToProps() { // (state, ownProps)
   return {
   };
 }
