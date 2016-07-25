@@ -22,7 +22,7 @@ module.exports = {
 
   entry: [
     // Set up an ES6-ish environment
-    // 'babel-polyfill', // TODO does this break shit
+    'babel-polyfill',
 
     // Dev server w/hot loader setup
     'react-hot-loader/patch',

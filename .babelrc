@@ -3,23 +3,11 @@
   // cacheDirectory: true,
   "presets": ['es2015-loose', 'stage-0', 'react'],
 
-  // Babel also bakes a number of smaller helpers directly into your compiled code.
-  // This is OK for single files, but when bundling with Webpack, repeated code will
-  // result in a heavier file size. It is possible to replace these helpers with calls
-  // to the babel-runtime package by adding the transform-runtime plugin:
-  // "plugins": ['transform-runtime'],
-
   "env": {
     // only enable when process.env.NODE_ENV is 'development' or undefined
     "development": {
       "plugins": [
         "react-hot-loader/babel",
-
-
-        ["transform-runtime", {
-          "polyfill": false,
-          "regenerator": true,
-        }],
       ],
     },
   },
