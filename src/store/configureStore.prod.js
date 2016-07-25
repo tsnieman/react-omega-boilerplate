@@ -5,7 +5,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 
 // Redux middleware
-import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
 // Reducers
@@ -20,7 +19,7 @@ export default function configureStore(initialState) {
     rootReducer,
     initialState,
     compose(
-      applyMiddleware(thunk, sagaMiddleware),
+      applyMiddleware(sagaMiddleware),
     ),
   );
 

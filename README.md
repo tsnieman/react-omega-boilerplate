@@ -1,3 +1,18 @@
+# Pieces
+- babel
+- webpack
+- react
+- redux
+- redux-saga
+- css modules (via css-loader)
+- post css
+  - autoprefixer
+  - various other plugins
+- redbox
+- webfontloader
+- isomorphic-fetch
+
+
 # Oddities
 Note about warning which says "[react-router] You cannot change ; it will be ignored",
 -- this warning is harmless, we just can't disable it.

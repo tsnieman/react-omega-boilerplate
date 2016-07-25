@@ -7,7 +7,11 @@ new WebpackDevServer(webpack(config), {
   hot: true,
   historyApiFallback: true,
   stats: {
-    colors: true
+    colors: true,
+
+    // Disable build noise.
+    chunkModules: false,
+    assets: false,
   }
 }).listen(4200, 'localhost', function (err, result) {
   if (err) {
