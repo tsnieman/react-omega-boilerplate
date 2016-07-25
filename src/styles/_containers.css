@@ -1,0 +1,10 @@
+.container {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.fixed {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}

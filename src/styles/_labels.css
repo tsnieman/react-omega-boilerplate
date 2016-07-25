@@ -1,0 +1,13 @@
+@import './_variables.css';
+
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+}
+
+.default {
+  background: #bbb;
+  color: #fff;
+}

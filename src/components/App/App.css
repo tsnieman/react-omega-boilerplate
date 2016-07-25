@@ -1,0 +1,24 @@
+@import 'styles/_variables';
+
+/* All imported files below will
+ * have access to variables.  */
+@import 'styles/_reset';
+@import 'styles/_typography';
+
+:global {
+  #root {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+  }
+}
+
+.app-wrapper {
+  composes: flexbox column from 'styles/_flexbox.css';
+  height: 100%;
+}
+
+.app-content {
+  flex: 1 0 auto;
+  composes: flexbox column from 'styles/_flexbox.css';
+}

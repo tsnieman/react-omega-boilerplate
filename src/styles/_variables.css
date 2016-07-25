@@ -1,0 +1,26 @@
+/* "Brand" colors */
+$tyre: #3e4147;
+
+/* "State" colors */
+$positive-color: #0b0;
+$negative-color: #b00;
+
+/* Custom selectors */
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+@custom-selector :--text-blocks p, blockquote, h1, h2, h3, h4, h5, h6;
+
+/* Typography */
+$body-font-size: 16px;
+$site-text-color: #444;
+$site-font-family: 'Roboto', sans-serif;
+$site-link-color: #03a9f4;
+$site-margin: 2rem; /* TODO remove and just use rem? */
+
+/* Buttons */
+$button-border-radius: 0.15em;
+
+/* Experimental */
+$box-shadow-0: 0;
+$box-shadow-1: 0 -0.1rem 0.25rem -0.2rem rgba(0, 0, 0, 0.12),
+               0 0.1rem 0.3rem rgba(0, 0, 0, 0.12),
+               0 0.1rem 0.2rem rgba(0, 0, 0, 0.24);

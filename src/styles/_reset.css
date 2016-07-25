@@ -1,0 +1,114 @@
+/*
+// Life is easier when using `border-box`, so we're just going to make
+// everything `border-box`.  It's one of the very few things IE box model
+// got right.
+*/
+*,
+*:before, *::before,
+*:after, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  /*
+  // text-size-adjust:
+  //   Prevents certain mobile browsers from automatically zooming fonts.
+  //   Unlike `none`, a value of `100%` allows users to still pinch-zoom.
+  */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  /*
+  // font-smoothing:
+  // - Fonts on OS X will look more consistent with other systems that
+  //   do not render text using sub-pixel anti-aliasing.
+  // - Although grayscale is inferior to sub-pixel anti-aliasing, most
+  //   fonts were designed for the "thinner" anti-aliasing and look
+  //   better that way.
+  // - Setting this smoothing beforehand prevents an ugly flickering of
+  //   font "thickness" when animations start and stop. Browsers use this
+  //   simpler font smoothing to save on resources when animating or
+  //   transitioning elements.
+  */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* This gets rid of undesired page margins. */
+  margin: 0;
+
+  /*
+  // The default font size can vary between browsers; set this to a legible
+  // base size suited to your chosen main font.
+  */
+  font-size: $body-font-size;
+}
+
+/*
+// The default font size can vary between browsers; set this to a legible
+// base size suited to your chosen main font.
+*/
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  /*
+  // This gets rid of the little bullets and numbers from list items, saving
+  // you having to strip them off repeatedly every time you make a menu or 
+  // any other component that is semantically a list.
+  */
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /*
+  // Components of a modern web page tend to have very localised heading styles;
+  // it's never one-size-fits-all.
+  */
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  /*
+  // Long-gone are the days where all hyperlinks were blue, underlined and only
+  // wrapped inline content.
+  */
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  outline: 0;
+  border: none;
+  border-style: none;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+img {
+  /* this makes sure images respect the bounds of a fluid container */
+  max-width: 100%;
+  height: auto;
+
+  /* fixes images within links gaining a border in IE 8, 9 and 10. */
+  border: 0;
+}
+
+br {
+  display: block;
+}

@@ -1,0 +1,15 @@
+html, body, input {
+  color: $site-text-color;
+  font-family: $site-font-family;
+  font-size: $body-font-size;
+}
+
+table {
+  th {
+    text-align: left; /* Chrome centers <th>s */
+  }
+}
+
+a {
+ color: $site-link-color;
+}

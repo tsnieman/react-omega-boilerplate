@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint", // allows you to lint ALL valid Babel code with ESLint (i.e. ones that ESLint doesn't support like the Spread Operator)
+  "extends": "airbnb",
+  "rules" : {
+    /* no-underscore-dangle disabled because we use mongoose's _id attr at the moment */
+    "no-underscore-dangle": 0, // https://github.com/eslint/eslint/blob/master/docs/rules/no-underscore-dangle.md
+    "react/jsx-no-target-blank": 2, // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+  },
+  "settings": {
+    "import/resolver": "webpack",
+  },
+}
