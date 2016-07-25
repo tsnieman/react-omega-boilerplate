@@ -11,7 +11,10 @@
 - redbox
 - webfontloader
 - isomorphic-fetch
-
+- eslint
+- redux-devtools
+  - redux-devtools-dock-monitor
+  - redux-devtools-log-monitor
 
 # Oddities
 Note about warning which says "[react-router] You cannot change ; it will be ignored",
@@ -24,3 +27,4 @@ Discussion/PR: https://github.com/facebook/react/pull/6020
 
 # TODO
 - [ ] error system (well, more like a general 'alert' system)
+- add explanations about each tech in [Pieces section](#Pieces)
