@@ -28,3 +28,4 @@ Discussion/PR: https://github.com/facebook/react/pull/6020
 # TODO
 - [ ] error system (well, more like a general 'alert' system)
 - add explanations about each tech in [Pieces section](#Pieces)
+- testing
