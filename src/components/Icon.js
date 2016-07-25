@@ -100,7 +100,6 @@ const Icon = (props) => {
     <svg
       viewBox="0 0 24 24"
       preserveAspectRatio="xMidYMid meet"
-      fit
       style={{
         ...iconStyle,
         ...props.style,
