@@ -8,7 +8,8 @@
     "build:prod": "npm run clean && webpack --config webpack.config.js -p",
     "start": "npm run build:dev && NODE_ENV=development node ./devServer.js",
     "tests": "mocha ./test/setup.js ./test/tests.js",
-    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --no-cache --watch"
+    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --no-cache --watch && ava",
+    "ava": "NODE_ENV=test BABEL_DISABLE_CACHE=1 ava -w ./ava-browser-setup.js avatest/*.spec.js"
   },
   "homepage": "https://github.com/tsnieman/react-omega-boilerplate",
   "dependencies": {
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
+    "ava": "^0.15.2",
     "babel-cli": "^6.11.4",
     "babel-core": "^6.11.4",
     "babel-eslint": "^6.1.2",
@@ -96,5 +98,10 @@
     "modulePaths": [
       "/src"
     ]
+  },
+
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
   }
 }
