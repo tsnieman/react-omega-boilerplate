@@ -28,9 +28,11 @@ Discussion/PR: https://github.com/facebook/react/pull/6020
 # TODO
 - [ ] error system (well, more like a general 'alert' system)
 - add explanations about each tech in [Pieces section](#Pieces)
-- testing
-  - jest + webpack : https://facebook.github.io/jest/docs/tutorial-webpack.html
+- [x] testing
+  - [x] jest + webpack : https://facebook.github.io/jest/docs/tutorial-webpack.html
   - enzyme + jest + mocha(|ava|tape|jasmine) : https://semaphoreci.com/community/tutorials/testing-react-components-with-enzyme-and-mocha
+    - particularly interested in ava (avajs)
+  - investigate [snapshot testing in jest](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
 - test the prod config. (is probably very broken; the files are split where there should be differences for the most part, though)
 
 # Credits / thanks
