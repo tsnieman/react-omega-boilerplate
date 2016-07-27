@@ -1,24 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
 
-// PostCSS plugins (build your own CSS!)
-var postcssNested = require('postcss-nested');
-var autoprefixer = require('autoprefixer');
-var hexrgba = require('postcss-hexrgba');
-var advancedVariables = require('postcss-advanced-variables');
-var customSelectors = require('postcss-custom-selectors');
-var colorFunctions = require('postcss-color-function');
-var postcssImport = require('postcss-import');
+// Shared config for handling webpack loaders
+// seamlessly in babel with webpack-for-babel-plugin.
+var runtimeConfig = require('./runtime.webpack.config');
 
-// HtmlWebpackPlugin builds the index.html file for the app.
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
-// var ExportFilesWebpackPlugin = require('export-files-webpack-plugin'); // allows use of HtmlWebpackPlugin w/ devserver
-
-module.exports = {
+module.exports = Object.assign({}, runtimeConfig, {
   devtool: 'cheap-module-eval-source-map',
-
-  // Base directory used when resolving the 'entry' option
-  context: __dirname,
 
   entry: [
     // Set up an ES6-ish environment
@@ -45,33 +33,6 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
   ],
 
-  resolve: {
-    root: __dirname, // ABSOLUTE PATH ONLY
-    modulesDirectories: [
-      "node_modules",
-      "src",
-    ],
-  },
-
-  postcss: function(webpack) {
-    return [
-      postcssImport({
-        addDependencyTo: webpack,
-        path: [
-          './src'
-        ],
-      }),
-      advancedVariables,
-      customSelectors,
-      postcssNested,
-      hexrgba,
-      colorFunctions,
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-    ]
-  },
-
   module: {
     preLoaders: [
       {
@@ -81,7 +42,7 @@ module.exports = {
       },
     ],
 
-    loaders: [
+    loaders: [].concat(
       // Javascript
       {
         test: /\.js$/,
@@ -90,17 +51,7 @@ module.exports = {
         // include: path.join(__dirname, 'src'),
       },
 
-      // CSS (PostCSS)
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader?importLoaders=1&modules&localIdentName=[hash:base64]!postcss-loader',
-      },
-
-      // Images (will inline as "Data URIs" when images are small enough)
-      {
-        test: /\.(png|jpg|jpeg|svg)$/,
-        loader: 'url-loader?limit=100000',
-      },
-    ],
+      runtimeConfig.module.loaders
+    ),
   },
-}
+})

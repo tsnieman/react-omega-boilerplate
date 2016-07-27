@@ -22,6 +22,7 @@ module.exports = {
 
   output: {
     // YOU NEED TO SET libraryTarget: 'commonjs2'
+    // for webpack-for-babel-plugin
     libraryTarget: 'commonjs2',
   },
 
@@ -50,7 +51,7 @@ module.exports = {
       {
         test: /\.css$/,
         // NOTE: changed localIdentName for testing purposes.
-        loader: 'style-loader!css-loader?importLoaders=1&modules&localIdentName=[local]!postcss-loader',
+        loader: 'style-loader!css-loader?importLoaders=1&modules&localIdentName=[hash:base64]!postcss-loader',
       },
 
       // Images (will inline as "Data URIs" when images are small enough)
