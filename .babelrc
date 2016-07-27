@@ -7,8 +7,20 @@
     // only enable when process.env.NODE_ENV is 'development' or undefined
     "development": {
       "plugins": [
-        "react-hot-loader/babel",
-      ],
+        "react-hot-loader/babel"
+      ]
     },
-  },
+
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-webpack-loaders",
+          {
+            "config": "./runtime.webpack.config.js",
+            "verbose": false
+          }
+        ]
+      ]
+    }
+  }
 }

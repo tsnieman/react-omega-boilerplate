@@ -53,6 +53,25 @@ module.exports = {
     ],
   },
 
+  postcss: function(webpack) {
+    return [
+      postcssImport({
+        addDependencyTo: webpack,
+        path: [
+          './src'
+        ],
+      }),
+      advancedVariables,
+      customSelectors,
+      postcssNested,
+      hexrgba,
+      colorFunctions,
+      autoprefixer({
+        browsers: ['last 2 versions'],
+      }),
+    ]
+  },
+
   module: {
     preLoaders: [
       {
@@ -83,24 +102,5 @@ module.exports = {
         loader: 'url-loader?limit=100000',
       },
     ],
-  },
-
-  postcss: function() {
-    return [
-      postcssImport({
-        addDependencyTo: webpack,
-        path: [
-          './src'
-        ],
-      }),
-      advancedVariables,
-      customSelectors,
-      postcssNested,
-      hexrgba,
-      colorFunctions,
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-    ]
   },
 }
