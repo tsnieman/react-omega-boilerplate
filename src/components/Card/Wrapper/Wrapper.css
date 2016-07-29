@@ -1,0 +1,6 @@
+@import 'styles/_variables';
+@import '../Card';
+
+.wrapper {
+  border: 1px solid $border-color;
+}

@@ -4,6 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './Home.css';
 
 // Components
+import Card from 'components/Card';
 import Icon from 'components/Icon';
 import { Link } from 'react-router';
 
@@ -16,6 +17,12 @@ const Home = () => (
         <Icon icon="info" /> About
       </Link>
     </nav>
+
+    <Card.Wrapper>
+      <Card.Body>
+        This is Card.Body text.
+      </Card.Body>
+    </Card.Wrapper>
   </div>
 );
 

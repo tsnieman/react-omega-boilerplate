@@ -1,0 +1,6 @@
+@import 'styles/_variables';
+@import '../Card';
+
+.wrapper {
+  padding: $content-padding;
+}

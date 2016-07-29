@@ -1,0 +1,4 @@
+@import 'styles/_variables';
+
+$border-color: $color-black;
+$content-padding: 1em;
