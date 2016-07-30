@@ -51,7 +51,7 @@ module.exports = {
       {
         test: /\.css$/,
         // NOTE: changed localIdentName for testing purposes.
-        loader: 'style-loader!css-loader?importLoaders=1&modules&localIdentName=[hash:base64]!postcss-loader',
+        loader: 'style-loader!css-loader?importLoaders=2&modules&localIdentName=[hash:base64]!postcss-loader',
       },
 
       // Images (will inline as "Data URIs" when images are small enough)

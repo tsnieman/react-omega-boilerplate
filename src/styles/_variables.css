@@ -1,8 +1,12 @@
 /* Basic colors */
 $color-black: #000;
+$color-gray-80: color($color-black lightness(80%));
+$color-gray-60: color($color-black lightness(60%));
+$color-gray-40: color($color-black lightness(40%));
+$color-gray-20: color($color-black lightness(20%));
 $color-white: #fff;
 
-/* "Brand" colors */
+/* Basic "named" colors */
 $tyre: #3e4147;
 
 /* "State" colors */
@@ -15,7 +19,7 @@ $negative-color: #b00;
 
 /* Typography */
 $body-font-size: 16px;
-$site-text-color: #444;
+$site-text-color: $tyre;
 $site-font-family: 'Roboto', sans-serif;
 $site-link-color: #03a9f4;
 $site-margin: 2rem; /* TODO remove and just use rem? */

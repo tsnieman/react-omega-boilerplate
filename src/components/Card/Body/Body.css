@@ -3,4 +3,5 @@
 
 .wrapper {
   padding: $content-padding;
+  composes: body-text from 'styles/_typography.css';
 }

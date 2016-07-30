@@ -1,6 +1,6 @@
+@import 'styles/_variables';
+
 html, body, input {
-  color: $site-text-color;
-  font-family: $site-font-family;
   font-size: $body-font-size;
 }
 
@@ -12,4 +12,10 @@ table {
 
 a {
  color: $site-link-color;
+}
+
+/* TODO explanation of why font-family isn't set at body (i.e. faster rendering) */
+.body-text {
+  color: $site-text-color;
+  font-family: $site-font-family;
 }
