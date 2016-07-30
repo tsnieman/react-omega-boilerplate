@@ -26,11 +26,9 @@ as react itself needs to be patch.
 Discussion/PR: https://github.com/facebook/react/pull/6020
 
 # css modules + `composes from` + testing = BAD
-- ~~Hot reloading while using `npm test` (watching for test changes) seems to miss new style modules (i.e. style modules aren't hot loaded). Needs further investigation.~~
-- EDIT1: testing setup doesn't like `composes` (css modules via react-css-modules + css loader) at all.
-- EDIT2: Actually, upon further testing with the aforementioned setup, it seems that using `composes from '../some/file.css'` within the imported CSS has some unexpected (test-breaking) results :-1:  If you use `composes`, it overwrites ALL OTHER style modules. Follow along in this ticket: https://github.com/gajus/react-css-modules/issues/146
-- EDIT3: Found the proper bug tracking it (note: it was with babel-plugin-webpack-loaders, not react-css-modules!): https://github.com/istarkov/babel-plugin-webpack-loaders/issues/97
-There's a solution that involves using block-loader to remove offending 'composes'. Will implement ASAP. **Because of this, I'm simply going to dismiss css module / style testing from this project for the most part.**
+Relevant bug: https://github.com/istarkov/babel-plugin-webpack-loaders/issues/97
+The solution in this repo: [a custom loader](/blob/master/remove-composes.js) which removes 'composes' in test mode entirely.
+This means that you shouldn't count on testing 'composes'-related stuff.
 
 # TODO
 - [ ] error system (well, more like a general 'alert' system)
