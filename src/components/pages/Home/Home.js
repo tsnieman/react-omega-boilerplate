@@ -24,7 +24,8 @@ const Home = () => (
 
     <Card.Wrapper>
       <Card.Body>
-        This is Card.Body text.
+        <p>This is Card.Body text.</p>
+        <p>Test 2nd paragraph.</p>
 
         <br />
 

@@ -18,4 +18,25 @@ a {
 .body-text {
   color: $site-text-color;
   font-family: $site-font-family;
+
+  h1 {
+    font-size: $h1-size;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: $h2-size;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: $h3-size;
+    font-weight: 700;
+  }
+
+  :--text-blocks {
+    + :--text-blocks {
+      margin-top: 1em;
+    }
+  }
 }
