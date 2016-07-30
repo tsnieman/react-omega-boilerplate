@@ -1,5 +1,4 @@
 @import 'styles/_variables';
-@import 'styles/_typography';
 
 .page {
   width: 40rem;
@@ -8,7 +7,7 @@
 }
 
 .header {
- composes: body-text;
+ composes: body-text from 'styles/_typography.css';
 
   h1 {
     text-align: center;

@@ -55,6 +55,7 @@ module.exports = {
           'style-loader',
           'css-loader?modules&importLoaders=2&localIdentName=[hash:base64]',
           'postcss-loader',
+          __dirname + '/remove-composes',
         ],
       },
 
