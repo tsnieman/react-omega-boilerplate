@@ -17,15 +17,15 @@
   - redux-devtools-log-monitor
 
 # Oddities
-Note about warning which says "[react-router] You cannot change ; it will be ignored",
+**Note about warning which says "[react-router] You cannot change ; it will be ignored",**
 -- this warning is harmless, we just can't disable it.
 Discussion/PR: https://github.com/gaearon/react-hot-loader/pull/240#issuecomment-225879719
 
-Note about Redbox: it won't hot-reload to show the red screen of death (rsod),
+**Note about Redbox:** it won't hot-reload to show the red screen of death (rsod),
 as react itself needs to be patch.
 Discussion/PR: https://github.com/facebook/react/pull/6020
 
-# css modules + `composes from` + testing = BAD
+**css modules + `composes from` + testing = BAD**
 Relevant bug: https://github.com/istarkov/babel-plugin-webpack-loaders/issues/97
 The solution in this repo: [a custom loader](/blob/master/remove-composes.js) which removes 'composes' in test mode entirely.
 This means that you shouldn't count on testing 'composes'-related stuff.
