@@ -7,9 +7,7 @@
 }
 
 .header {
-  /* 'composes' breaks testing right now lol.
-   *composes: body-text from 'styles/_typography.css';
-   */
+ composes: body-text from 'styles/_typography.css';
 
   h1 {
     text-align: center;
