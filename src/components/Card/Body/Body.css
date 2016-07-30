@@ -1,8 +1,7 @@
 @import 'styles/_variables';
-@import 'styles/_typography';
 @import '../Card';
 
 .wrapper {
   padding: $content-padding;
-  composes: body-text;
+  composes: body-text from 'styles/_typography.css';
 }
