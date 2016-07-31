@@ -5,7 +5,7 @@ $button-padding-h: 0.75em;
 $button-padding: $button-padding-v $button-padding-h;
 
 $button-default-background-color: color($color-gray-20 alpha(0.25));
-$button-default-hover-background-color: color($color-gray-20 alpha(0.35));
+$button-default-hover-background-color: color($button-default-background-color alpha(0.35));
 
 $button-background-transition: 0.15s ease-in-out background;
 
