@@ -1,0 +1,19 @@
+/* Full disclosure, these shadows are ... ahem.. borrowed from material-design-lite.
+ * https://github.com/google/material-design-lite/blob/mdl-1.x/src/_mixins.scss
+ */
+
+.focus {
+  box-shadow: $shadow-focus;
+}
+
+.shadow-0 {
+  box-shadow: $shadow-0;
+}
+
+.shadow-1 {
+  box-shadow: $shadow-1;
+}
+
+.shadow-2 {
+  box-shadow: $shadow-2;
+}

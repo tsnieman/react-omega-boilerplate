@@ -10,6 +10,8 @@ $button-default-hover-background-color: color($color-gray-20 alpha(0.35));
 $button-background-transition: 0.15s ease-in-out background;
 
 .wrapper {
+  display: inline-block;
+
   padding: $button-padding;
 
   font-family: $site-font-family;
@@ -25,4 +27,9 @@ $button-background-transition: 0.15s ease-in-out background;
   &:hover {
     background: $button-default-hover-background-color;
   }
+}
+
+/* TODO even bother? */
+a.wrapper {
+  cursor: pointer;
 }

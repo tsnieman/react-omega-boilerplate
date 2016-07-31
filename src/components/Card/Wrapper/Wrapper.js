@@ -7,6 +7,12 @@ import styles from './Wrapper.css';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
+const VALID_SUBCOMPONENTS = [
+  'Body',
+  'Title',
+  'Actions',
+];
+
 const Wrapper = (props) => {
   const {
     children,
@@ -21,7 +27,7 @@ const Wrapper = (props) => {
     React.Children.map(children, (child) => {
       // TODO not sure displayName is reliable in prod... hmmm..
       const hasType = (typeof child.type === 'function'); // divs or whatever would just be 'div'
-      const isValidSubcomponent = hasType && (child.type.displayName.indexOf('Body') > -1);
+      const isValidSubcomponent = hasType && VALID_SUBCOMPONENTS.includes(child.type.displayName);
       if (isValidSubcomponent) cardChildren.push(child);
     });
 

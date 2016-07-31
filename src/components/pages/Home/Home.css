@@ -13,3 +13,15 @@
     text-align: center;
   }
 }
+
+.card {
+  /*
+   *composes: shadow-1 from 'styles/_shadows.css';
+   */
+
+  transition: 0.15s box-shadow ease-in-out;
+
+  &:hover {
+    box-shadow: $shadow-focus;
+  }
+}

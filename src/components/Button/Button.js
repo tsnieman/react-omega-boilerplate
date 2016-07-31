@@ -12,6 +12,7 @@ import { Link } from 'react-router';
 const Button = (props) => {
   const {
     children,
+    className,
 
     // Button-specific
     // variety,
@@ -23,6 +24,7 @@ const Button = (props) => {
   const cleanProps = {
     ...props,
     styleName: 'wrapper',
+    className: `${className} button`,
   };
   // delete cleanProps.variety; // Button-specific
   delete cleanProps.styles; // react-css-modules cruft
@@ -44,6 +46,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   children: PropTypes.any,
+  className: PropTypes.string,
 
   // Button-specific
   // variety, // other names: tone, kind, type etc)
@@ -54,6 +57,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: '',
 };
 
 export default cssModules(Button, styles);

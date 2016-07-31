@@ -4,3 +4,8 @@
 .wrapper {
   composes: body-text from 'styles/_typography.css';
 }
+
+.title-text {
+  font-size: $h3-size;
+  font-weight: 700;
+}

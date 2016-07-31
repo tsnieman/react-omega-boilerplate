@@ -3,4 +3,12 @@
 
 .wrapper {
   composes: body-text from 'styles/_typography.css';
+
+  :global {
+    .button {
+      + .button {
+        margin-left: 1em;
+      }
+    }
+  }
 }

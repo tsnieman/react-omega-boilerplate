@@ -4,6 +4,8 @@ import { shallow, mount, render } from 'enzyme';
 
 import Wrapper from 'components/Card/Wrapper'
 import Body from 'components/Card/Body'
+import Title from 'components/Card/Title'
+import Actions from 'components/Card/Actions'
 
 describe('Wrapper component', function() {
   it('should render null with no props or children', () => {
@@ -62,5 +64,25 @@ describe('Wrapper component', function() {
     );
 
     expect(wrapper.html()).to.contain('card-body')
+  });
+
+  it('should render Title children', () => {
+    let wrapper = shallow(
+      <Wrapper>
+        <Title>testing</Title>
+      </Wrapper>
+    );
+
+    expect(wrapper.html()).to.contain('card-title')
+  });
+
+  it('should render Actions children', () => {
+    let wrapper = shallow(
+      <Wrapper>
+        <Actions>testing</Actions>
+      </Wrapper>
+    );
+
+    expect(wrapper.html()).to.contain('card-actions')
   });
 });
