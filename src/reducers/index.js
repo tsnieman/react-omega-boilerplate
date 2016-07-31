@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import map from './map';
+import github from './github';
 import { routerReducer as routing } from 'react-router-redux';
 
 const rootReducer = combineReducers({
   routing,
-  map,
+  github,
 });
 
 export default rootReducer;
