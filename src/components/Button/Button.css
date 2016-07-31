@@ -1,6 +1,6 @@
 @import 'styles/_variables';
 
-$button-padding-v: 0.25em;
+$button-padding-v: 0.5em;
 $button-padding-h: 0.75em;
 $button-padding: $button-padding-v $button-padding-h;
 
@@ -8,6 +8,8 @@ $button-default-background-color: color($color-gray-20 alpha(0.25));
 $button-default-hover-background-color: color($color-gray-20 alpha(0.35));
 
 $button-background-transition: 0.15s ease-in-out background;
+
+$button-border-radius: 2px;
 
 .wrapper {
   display: inline-block;
@@ -21,6 +23,7 @@ $button-background-transition: 0.15s ease-in-out background;
 
   color: inherit;
   background: $button-default-background-color;
+  border-radius: $button-border-radius;
 
   transition: $button-background-transition;
 
