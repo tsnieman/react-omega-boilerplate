@@ -30,7 +30,6 @@ AboutPageContainer.propTypes = {
 };
 
 function mapStateToProps(state) { // (state, ownProps)
-  console.log({ state });
   return {
     users: state.github.users,
   };
