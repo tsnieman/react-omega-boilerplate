@@ -8,12 +8,14 @@ import './App.css'; // Global site styling (reset, typography, etc)
 import styles from './App.css'; // Styles for this component (via css modules)
 /* eslint-enable */
 
+/*
 import WebFont from 'webfontloader'; // Site font loader
 WebFont.load({
   google: {
     families: ['Roboto:300,400,500,700'],
   },
 });
+*/
 
 const App = (props) => {
   const {
