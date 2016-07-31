@@ -22,6 +22,21 @@ const Home = () => (
       </nav>
     </header>
 
+    <Card.Wrapper styleName="card">
+      <Card.Title>
+        Card Title
+      </Card.Title>
+
+      <Card.Body>
+        <p>This is Card.Body text.</p>
+      </Card.Body>
+
+      <Card.Actions>
+        <Button>Action Button</Button>
+        <Button to="/about">Action Button[to]</Button>
+      </Card.Actions>
+    </Card.Wrapper>
+
     <Card.Wrapper styleName="main-card">
       <Card.Title>
         Card Title

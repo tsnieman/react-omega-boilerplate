@@ -42,6 +42,12 @@ This means that you shouldn't count on testing 'composes'-related stuff.
   - [ ] investigate [producthunt/chai-enzyme](/producthunt/chai-enzyme) ?
   - [writing redux tests](/reactjs/redux/blob/master/docs/recipes/WritingTests.md)
 - test the prod config. (is probably very broken; the files are split where there should be differences for the most part, though)
+- investigate style linting
+  - via postcss: https://github.com/stylelint/stylelint
+- consider other postcss plugins
+  - css variables https://github.com/MadLittleMods/postcss-css-variables
+  - map might be particularly handy https://github.com/pascalduez/postcss-map
+  - http://postcss.parts/
 
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.
