@@ -15,7 +15,7 @@ describe('Body component', function() {
   it('should have .card-body class', () => {
     let wrapper = shallow(
       <Body>
-        <div>testing</div>
+        testing
       </Body>
     );
 
@@ -25,7 +25,7 @@ describe('Body component', function() {
   it('should pass-through class via className (and still have .card-body class)', () => {
     let wrapper = shallow(
       <Body className="test-class">
-        <div>testing</div>
+        testing
       </Body>
     );
 
@@ -36,7 +36,7 @@ describe('Body component', function() {
   it('should pass on arbitrary props', () => {
     let wrapper = shallow(
       <Body data-arbitrary>
-        <div>testing</div>
+        testing
       </Body>
     );
 
@@ -46,10 +46,10 @@ describe('Body component', function() {
   it('should render content/children', () => {
     let wrapper = shallow(
       <Body>
-        <div>testing</div>
+        testing
       </Body>
     );
 
-    expect(wrapper.html()).to.contain('<div>testing</div>')
+    expect(wrapper.html()).to.contain('testing')
   });
 });
