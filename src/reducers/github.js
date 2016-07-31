@@ -7,7 +7,7 @@ const INITIAL_STATE = {
   users: {},
 };
 
-const actions = {
+const reducers = {
   [GITHUB_ACTIONS.SET_USER]: (state, action) => ({
     ...state,
     users: {
@@ -18,8 +18,8 @@ const actions = {
 };
 
 export default function map(state = INITIAL_STATE, action) {
-  const actionCreator = actions[action.type];
-  if (actionCreator) return actionCreator(state, action);
+  const reducer = reducers[action.type];
+  if (reducer) return reducer(state, action);
 
   return state;
 }
