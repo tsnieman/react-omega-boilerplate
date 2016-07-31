@@ -8,6 +8,7 @@
 
 .header {
  composes: body-text from 'styles/_typography.css';
+ margin-bottom: 1rem;
 
   h1 {
     text-align: center;
@@ -24,4 +25,13 @@
   &:hover {
     box-shadow: $shadow-focus;
   }
+
+  + .card {
+    margin-top: 1rem;
+  }
+}
+
+.main-card {
+  composes: card;
+  background: #9ac5a7;
 }

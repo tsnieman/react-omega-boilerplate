@@ -22,7 +22,7 @@ const Home = () => (
       </nav>
     </header>
 
-    <Card.Wrapper styleName="card">
+    <Card.Wrapper styleName="main-card">
       <Card.Title>
         Card Title
       </Card.Title>
@@ -36,6 +36,24 @@ const Home = () => (
       <Card.Actions>
         <Button>Just a button</Button>
         <Button to="/about">Button[to]</Button>
+      </Card.Actions>
+    </Card.Wrapper>
+
+    <Card.Wrapper styleName="card">
+      <Card.Title>
+        Title-only
+      </Card.Title>
+    </Card.Wrapper>
+
+    <Card.Wrapper styleName="card">
+      <Card.Body>
+        Body-only
+      </Card.Body>
+    </Card.Wrapper>
+
+    <Card.Wrapper styleName="card">
+      <Card.Actions>
+        Actions-only
       </Card.Actions>
     </Card.Wrapper>
   </div>
