@@ -1,9 +1,9 @@
 // Basics
 import { fork } from 'redux-saga/effects';
 
-import mapSagas from 'sagas/map';
+import githubSagas from 'sagas/github';
 const sagas = [
-  ...mapSagas,
+  ...githubSagas,
 ];
 
 export default function* rootSaga() {

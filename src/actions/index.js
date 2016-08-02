@@ -1,5 +1,5 @@
-import * as map from './map';
+import * as github from './github';
 
 export default {
-  map,
+  github,
 };
