@@ -34,6 +34,10 @@ const Home = () => (
       <Card.Actions>
         <Button>Action Button</Button>
         <Button to="/about">Action Button[to]</Button>
+
+        <Button styleName="right-button">
+          <Icon icon="star" />
+        </Button>
       </Card.Actions>
     </Card.Wrapper>
 
@@ -49,8 +53,8 @@ const Home = () => (
       </Card.Body>
 
       <Card.Actions>
-        <Button>Just a button</Button>
-        <Button to="/about">Button[to]</Button>
+        <Button variant="negative">Negative button</Button>
+        <Button variant="positive">Positive button</Button>
       </Card.Actions>
     </Card.Wrapper>
 

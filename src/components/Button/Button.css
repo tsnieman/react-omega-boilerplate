@@ -7,6 +7,12 @@ $button-padding: $button-padding-v $button-padding-h;
 $button-default-background-color: color($color-gray-20 alpha(0.25));
 $button-default-hover-background-color: color($button-default-background-color alpha(0.35));
 
+$button-negative-background-color: color($color-negative);
+$button-negative-hover-background-color: color($button-negative-background-color);
+
+$button-positive-background-color: color($color-positive);
+$button-positive-hover-background-color: color($button-positive-background-color);
+
 $button-background-transition: 0.15s ease-in-out background;
 
 $button-border-radius: 2px;
@@ -21,14 +27,41 @@ $button-border-radius: 2px;
   /* should buttons never be pointers? https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b#.mxi539ydo */
   cursor: default; 
 
-  color: inherit;
-  background: $button-default-background-color;
   border-radius: $button-border-radius;
 
   transition: $button-background-transition;
+}
+
+.button-default {
+  composes: wrapper;
+  background: $button-default-background-color;
+  color: inherit;
 
   &:hover {
     background: $button-default-hover-background-color;
+  }
+}
+
+.button-negative {
+  composes: wrapper;
+
+  background: $button-negative-background-color;
+  color: $color-light-on-dark;
+  font-weight: 700;
+
+  &:hover {
+    background: $button-negative-hover-background-color;
+  }
+}
+
+.button-positive {
+  composes: wrapper;
+
+  background: $button-positive-background-color;
+  color: $color-light-on-dark;
+
+  &:hover {
+    background: $button-positive-hover-background-color;
   }
 }
 

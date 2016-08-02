@@ -43,5 +43,10 @@
 
 .main-card {
   composes: card;
-  background: #9ac5a7;
+  background: $tyre;
+  color: $color-light-on-dark;
+}
+
+.right-button {
+  float: right;
 }

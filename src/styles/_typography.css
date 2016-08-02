@@ -1,6 +1,7 @@
 @import 'styles/_variables';
 
 html, body, input {
+  color: $site-text-color;
   font-size: $body-font-size;
 }
 
@@ -16,7 +17,6 @@ a {
 
 /* TODO explanation of why font-family isn't set at body (i.e. faster rendering) */
 .body-text {
-  color: $site-text-color;
   font-family: $site-font-family;
 
   h1 {

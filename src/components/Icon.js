@@ -106,10 +106,7 @@ const Icon = (props) => {
       }}
       className={props.className}
       onClick={props.onClick}
-    >
-
-      {graphic}
-    </svg>
+    >{graphic}</svg>
   );
 };
 /* eslint-enable max-len */

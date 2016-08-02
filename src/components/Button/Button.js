@@ -9,24 +9,35 @@ import { Link } from 'react-router';
 
 // TODO build the route helper into this? overkill?
 
+export const VARIANTS = [
+  'default',
+  'positive',
+  'negative',
+];
+
 const Button = (props) => {
   const {
     children,
     className,
 
     // Button-specific
-    // variety,
+    variant,
 
     // link-specific
     to,
   } = props;
 
+  let styleVariant = 'button-default';
+  if (VARIANTS.includes(variant)) {
+    styleVariant = `button-${variant}`;
+  }
+
   const cleanProps = {
     ...props,
-    styleName: 'wrapper',
+    styleName: styleVariant,
     className: `${className} button`,
   };
-  // delete cleanProps.variety; // Button-specific
+  delete cleanProps.variant; // Button-specific
   delete cleanProps.styles; // react-css-modules cruft
 
 
@@ -49,7 +60,7 @@ Button.propTypes = {
   className: PropTypes.string,
 
   // Button-specific
-  // variety, // other names: tone, kind, type etc)
+  variant: PropTypes.string,
 
   // link-specific
   to: PropTypes.string,

@@ -10,9 +10,13 @@ $color-white: #fff;
 $icicles: #f4f7f7;
 $tyre: #3e4147;
 
+/* Experimental colors */
+$color-light-on-dark: $color-white; /* lighter color for putting on dark bg */
+$color-dark-on-light: $color-black; /* darker color for putting on light bg */
+
 /* "State" colors */
-$positive-color: #0b0;
-$negative-color: #b00;
+$color-positive: #0b0;
+$color-negative: #b00;
 
 /* Custom selectors */
 @custom-selector :--app-root #root;
