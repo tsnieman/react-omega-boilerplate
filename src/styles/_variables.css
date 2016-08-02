@@ -7,6 +7,7 @@ $color-gray-20: color($color-black lightness(20%));
 $color-white: #fff;
 
 /* Basic "named" colors */
+$icicles: #f4f7f7;
 $tyre: #3e4147;
 
 /* "State" colors */
@@ -14,6 +15,7 @@ $positive-color: #0b0;
 $negative-color: #b00;
 
 /* Custom selectors */
+@custom-selector :--app-root #root;
 @custom-selector :--headings h1, h2, h3, h4, h5, h6;
 @custom-selector :--text-blocks p, blockquote, h1, h2, h3, h4, h5, h6;
 

@@ -30,6 +30,7 @@
 
 .card {
   transition: 0.15s box-shadow ease-in-out;
+  background: $color-white;
 
   &:hover {
     box-shadow: $shadow-focus;

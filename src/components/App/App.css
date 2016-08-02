@@ -6,7 +6,7 @@
 @import 'styles/_typography';
 
 :global {
-  #root {
+  :--app-root {
     position: relative;
     min-height: 100vh;
     height: 100vh;
@@ -21,4 +21,5 @@
 .app-content {
   flex: 1 0 auto;
   composes: flexbox column from 'styles/_flexbox.css';
+  background: $icicles;
 }
