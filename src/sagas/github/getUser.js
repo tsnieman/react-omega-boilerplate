@@ -9,8 +9,10 @@ import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
 // Helpers
 import fetch from 'helpers/fetch';
 
-export function* getUser(action) {
+export function* getUser(action = {}) {
   try {
+    if (!action.username) throw new Error('No username provided');
+
     const { username, options } = action;
 
     const fetchedUser = yield call(fetch, `https://api.github.com/users/${username}`, {
@@ -28,9 +30,12 @@ export function* getUser(action) {
 
     yield put(actions.github.setUser(fetchedUser));
   } catch (err) {
-    // TODO?
+    // TODO error action for in-browser feedback.
     // yield put(ErrorAction())
-    console.log('yield put(ErrorAction())', err); // eslint-disable-line no-console
+    // console.log('yield put(ErrorAction())', err); // eslint-disable-line no-console
+
+    // TODO is test-only error-yielding a good choice?
+    if (process.env.NODE_ENV === 'test') yield err;
   } finally {
     if (yield cancelled()) {
       // TODO?
