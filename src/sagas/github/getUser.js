@@ -2,12 +2,10 @@
 import { takeLatest } from 'redux-saga';
 import { put, call, cancelled } from 'redux-saga/effects';
 import actions from 'actions';
+import services from 'services';
 
 // Constants
 import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
-
-// Helpers
-import fetch from 'helpers/fetch';
 
 export function* getUser(action = {}) {
   try {
@@ -15,14 +13,7 @@ export function* getUser(action = {}) {
 
     const { username, options } = action;
 
-    const fetchedUser = yield call(fetch, `https://api.github.com/users/${username}`, {
-      method: 'GET',
-      headers: {
-        // Accept header as per https://developer.github.com/v3/#current-version
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-      },
-    });
+    const fetchedUser = yield call(services.github.fetchUser, username);
 
     // TODO verify successful fetch?
 
