@@ -18,16 +18,18 @@ const About = ({ users }) => (
       </Card.Title>
 
       <Card.Body>
-        <ul>
-          {Object.keys(users).map((userId) => {
-            const user = users[userId];
-            return (
-              <li key={userId}>
-                <strong>Name:</strong> {user.name}
-              </li>
-            );
-          })}
-        </ul>
+        {users ? (
+          <ul>
+            {Object.keys(users).map((userId) => {
+              const user = users[userId];
+              return (
+                <li key={userId}>
+                  <strong>Name:</strong> {user.name}
+                </li>
+              );
+            })}
+          </ul>
+        ) : 'Loading'}
       </Card.Body>
     </Card.Wrapper>
   </div>

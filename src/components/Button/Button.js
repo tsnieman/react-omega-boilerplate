@@ -11,6 +11,7 @@ import { Link } from 'react-router';
 
 export const VARIANTS = [
   'default',
+  'inverse',
   'positive',
   'negative',
 ];
@@ -61,6 +62,7 @@ Button.propTypes = {
 
   // Button-specific
   variant: PropTypes.string,
+  disabled: PropTypes.bool,
 
   // link-specific
   to: PropTypes.string,
@@ -69,6 +71,10 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: '',
+
+  // Button-specific
+  disabled: false,
+  variant: 'default',
 };
 
 export default cssModules(Button, styles);

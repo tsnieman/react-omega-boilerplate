@@ -4,20 +4,28 @@ $button-padding-v: 0.5em;
 $button-padding-h: 0.75em;
 $button-padding: $button-padding-v $button-padding-h;
 
-$button-default-background-color: color($color-gray-20 alpha(0.25));
-$button-default-hover-background-color: color($button-default-background-color alpha(0.35));
+$button-default-background-color: color($color-black alpha(0.1));
+$button-default-hover-background-color: color($button-default-background-color alpha(0.2));
+
+$button-inverse-background-color: color($color-white alpha(0.1));
+$button-inverse-hover-background-color: color($button-inverse-background-color alpha(0.2));
+$button-inverse-color: $color-light-on-dark;
+
+$button-disabled-background-color: color($color-disabled-background alpha(0.2));
+$button-disabled-hover-background-color: color($button-disabled-background-color);
 
 $button-negative-background-color: color($color-negative);
-$button-negative-hover-background-color: color($button-negative-background-color);
+$button-negative-hover-background-color: color($button-negative-background-color lightness(-10%));
 
 $button-positive-background-color: color($color-positive);
-$button-positive-hover-background-color: color($button-positive-background-color);
+$button-positive-hover-background-color: color($button-positive-background-color lightness(+10%));
 
-$button-background-transition: 0.15s ease-in-out background;
+$button-background-transition: 0.12s ease-in-out background;
+$button-shadow-transition: 0.12s ease-in-out box-shadow;
 
 $button-border-radius: 2px;
 
-.wrapper {
+.button-base {
   display: inline-block;
 
   padding: $button-padding;
@@ -29,11 +37,34 @@ $button-border-radius: 2px;
 
   border-radius: $button-border-radius;
 
-  transition: $button-background-transition;
+  box-shadow: $shadow-0;
+  transition: $button-background-transition,
+              $button-shadow-transition;
+
+  &:hover {
+    box-shadow: $shadow-1;
+  }
+
+  &[disabled] {
+    background: $button-disabled-background-color;
+    color: $color-disabled-text;
+    border: 1px dashed;
+    cursor: not-allowed;
+
+    &:hover {
+      background: $button-disabled-hover-background-color;
+      box-shadow: $shadow-0;
+    }
+  }
+
+  /* TODO not sure i love putting icon styling here.. maybe icons should just be bigger? */
+  :global .icon {
+    transform: scale(1.2);
+  }
 }
 
 .button-default {
-  composes: wrapper;
+  composes: button-base;
   background: $button-default-background-color;
   color: inherit;
 
@@ -42,8 +73,18 @@ $button-border-radius: 2px;
   }
 }
 
+.button-inverse {
+  composes: button-base;
+  background: $button-inverse-background-color;
+  color: $button-inverse-color;
+
+  &:hover {
+    background: $button-inverse-hover-background-color;
+  }
+}
+
 .button-negative {
-  composes: wrapper;
+  composes: button-base;
 
   background: $button-negative-background-color;
   color: $color-light-on-dark;
@@ -55,7 +96,7 @@ $button-border-radius: 2px;
 }
 
 .button-positive {
-  composes: wrapper;
+  composes: button-base;
 
   background: $button-positive-background-color;
   color: $color-light-on-dark;
@@ -66,6 +107,6 @@ $button-border-radius: 2px;
 }
 
 /* TODO even bother? */
-a.wrapper {
+a.button-base {
   cursor: pointer;
 }

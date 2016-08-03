@@ -1,9 +1,14 @@
 /* Basic colors */
 $color-black: #000;
-$color-gray-80: color($color-black lightness(80%));
-$color-gray-60: color($color-black lightness(60%));
-$color-gray-40: color($color-black lightness(40%));
+$color-gray-10: color($color-black lightness(10%));
 $color-gray-20: color($color-black lightness(20%));
+$color-gray-30: color($color-black lightness(30%));
+$color-gray-40: color($color-black lightness(40%));
+$color-gray-50: color($color-black lightness(50%));
+$color-gray-60: color($color-black lightness(60%));
+$color-gray-70: color($color-black lightness(70%));
+$color-gray-80: color($color-black lightness(80%));
+$color-gray-90: color($color-black lightness(90%));
 $color-white: #fff;
 
 /* Basic "named" colors */
@@ -13,10 +18,12 @@ $tyre: #3e4147;
 /* Experimental colors */
 $color-light-on-dark: $color-white; /* lighter color for putting on dark bg */
 $color-dark-on-light: $color-black; /* darker color for putting on light bg */
+$color-disabled-background: $color-gray-80;
+$color-disabled-text: $color-gray-60;
 
 /* "State" colors */
-$color-positive: #0b0;
-$color-negative: #b00;
+$color-positive: #41ac6a;
+$color-negative: #ca4b4b;
 
 /* Custom selectors */
 @custom-selector :--app-root #root;
@@ -41,7 +48,7 @@ $shadow-key-umbra-opacity: 0.2;
 $shadow-key-penumbra-opacity: 0.14;
 $shadow-ambient-shadow-opacity: 0.12;
 $shadow-focus: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
-$shadow-0: 0;
+$shadow-0: none;
 $shadow-1: 0 2px 2px 0 rgba(0, 0, 0, $shadow-key-penumbra-opacity),
            0 3px 1px -2px rgba(0, 0, 0, $shadow-key-umbra-opacity),
            0 1px 5px 0 rgba(0, 0, 0, $shadow-ambient-shadow-opacity);

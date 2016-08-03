@@ -14,7 +14,7 @@ const Body = (props) => {
   } = props;
 
   const cleanProps = { ...props };
-  delete cleanProps.styles;
+  delete cleanProps.styles; // avoid react-css-modules related errors
 
   if (children) {
     return (

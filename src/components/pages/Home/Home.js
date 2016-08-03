@@ -5,6 +5,8 @@ import styles from './Home.css';
 
 // Components
 import Button from 'components/Button';
+import StarButton from 'components/StarButton';
+import IconButton from 'components/IconButton';
 import Card from 'components/Card';
 import Icon from 'components/Icon';
 import { Link } from 'react-router';
@@ -29,15 +31,16 @@ const Home = () => (
 
       <Card.Body>
         <p>This is Card.Body text.</p>
+        <br />
+        <Button variant="positive" disabled>[disabled] button</Button>
       </Card.Body>
 
       <Card.Actions>
         <Button>Action Button</Button>
         <Button to="/about">Action Button[to]</Button>
+        <IconButton icon="more-v" />
 
-        <Button styleName="right-button">
-          <Icon icon="star" />
-        </Button>
+        <StarButton styleName="right-button">Like</StarButton>
       </Card.Actions>
     </Card.Wrapper>
 
@@ -55,24 +58,8 @@ const Home = () => (
       <Card.Actions>
         <Button variant="negative">Negative button</Button>
         <Button variant="positive">Positive button</Button>
-      </Card.Actions>
-    </Card.Wrapper>
-
-    <Card.Wrapper styleName="card">
-      <Card.Title>
-        Title-only
-      </Card.Title>
-    </Card.Wrapper>
-
-    <Card.Wrapper styleName="card">
-      <Card.Body>
-        Body-only
-      </Card.Body>
-    </Card.Wrapper>
-
-    <Card.Wrapper styleName="card">
-      <Card.Actions>
-        Actions-only
+        <IconButton icon="more-v" variant="inverse">Inverse</IconButton>
+        <IconButton icon="warning" variant="inverse" disabled>Disabled</IconButton>
       </Card.Actions>
     </Card.Wrapper>
   </div>

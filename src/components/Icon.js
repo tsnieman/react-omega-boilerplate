@@ -8,7 +8,7 @@ import React, { PropTypes } from 'react';
 const Icon = (props) => {
   const iconStyle = {
     display: 'inline-block',
-    verticalAlign: 'top',
+    verticalAlign: '-0.1em',
     fill: 'currentcolor',
     width: props.size, // CSS instead of the width attr to support non-pixel units
     height: props.size, // Prevents scaling issue in IE
@@ -79,12 +79,12 @@ const Icon = (props) => {
       break;
     case 'warning':
       graphic = (
-        <g><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm1 15h-2v-2h2v2zm0-4h-2v-6h2v6z"></path></g>
+        <g><path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></g>
       );
       break;
     case 'error':
       graphic = (
-        <g><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-12h-12v12zm13-15h-3.5l-1-1h-5l-1 1h-3.5v2h14v-2z"></path></g>
+        <g><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm1 15h-2v-2h2v2zm0-4h-2v-6h2v6z"></path></g>
       );
       break;
     case 'info':
@@ -104,7 +104,7 @@ const Icon = (props) => {
         ...iconStyle,
         ...props.style,
       }}
-      className={props.className}
+      className={`${props.className} icon`}
       onClick={props.onClick}
     >{graphic}</svg>
   );
