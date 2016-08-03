@@ -18,18 +18,16 @@ const About = ({ users }) => (
       </Card.Title>
 
       <Card.Body>
-        {users ? (
-          <ul>
-            {Object.keys(users).map((userId) => {
-              const user = users[userId];
-              return (
-                <li key={userId}>
-                  <strong>Name:</strong> {user.name}
-                </li>
-              );
-            })}
-          </ul>
-        ) : 'Loading'}
+        <ul>
+          {Object.keys(users).map((userId) => {
+            const user = users[userId];
+            return (
+              <li key={userId}>
+                <strong>Name:</strong> {user.name}
+              </li>
+            );
+          })}
+        </ul>
       </Card.Body>
     </Card.Wrapper>
   </div>
@@ -37,6 +35,10 @@ const About = ({ users }) => (
 
 About.propTypes = {
   users: PropTypes.object.isRequired,
+};
+
+About.defaultProps = {
+  users: {},
 };
 
 export default cssModules(About, styles);
