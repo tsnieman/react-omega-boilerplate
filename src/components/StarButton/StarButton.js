@@ -2,27 +2,45 @@
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './StarButton.css';
+import { withState } from 'recompose';
 
 // Components
 import IconButton from 'components/IconButton';
 
-const StarButton = (props) => {
+const enhance = withState('starred', 'setStarred', (props) => props.starred);
+const StarButton = enhance((props) => {
   const {
-    children,
+    starred,
+    setStarred,
   } = props;
 
+  const cleanProps = { ...props };
+  delete cleanProps.starred; // StarButton-specific
+  delete cleanProps.setStarred; // StarButton-specific
+
+  const toggleStar = () => setStarred((n) => !n);
+
+  const icon = starred ? 'star' : 'star-outline';
+  const label = starred ? 'Starred' : 'Non-starred';
+  const style = starred ? { backgroundColor: '#ffe200' } : {};
+
   return (
-    <IconButton {...props} icon="star-outline">
-      {children}
-    </IconButton>
+    <IconButton
+      {...cleanProps}
+      icon={icon}
+      onClick={toggleStar}
+      style={style}
+    >{label}</IconButton>
   );
-};
+});
 
 StarButton.propTypes = {
-  children: PropTypes.any.isRequired,
+  starred: PropTypes.bool,
+  setStarred: PropTypes.func,
 };
 
 StarButton.defaultProps = {
+  starred: false,
 };
 
 export default cssModules(StarButton, styles);

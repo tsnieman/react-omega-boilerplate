@@ -40,7 +40,7 @@ const Home = () => (
         <Button to="/about">Action Button[to]</Button>
         <IconButton icon="more-v" />
 
-        <StarButton styleName="right-button">Like</StarButton>
+        <StarButton styleName="right-button" />
       </Card.Actions>
     </Card.Wrapper>
 

@@ -25,13 +25,29 @@ describe('StarButton component', function() {
     expect(wrapper.find('[data-arbitrary]')).to.have.length(1);
   });
 
-  it('should render content/children', () => {
+  it('should not render content/children', () => {
     let wrapper = shallow(
       <StarButton>
         testing
       </StarButton>
     );
 
-    expect(wrapper.html()).to.contain('testing')
+    expect(wrapper.html()).to.not.contain('testing');
+  });
+
+  it('should not be Starred by default', () => {
+    let wrapper = shallow(
+      <StarButton />
+    );
+
+    expect(wrapper.html()).to.contain('Non-starred');
+  });
+
+  it('should be Starred if props.starred is true', () => {
+    let wrapper = shallow(
+      <StarButton starred />
+    );
+
+    expect(wrapper.html()).to.contain('Starred');
   });
 });
