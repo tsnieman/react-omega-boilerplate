@@ -50,4 +50,16 @@ describe('StarButton component', function() {
 
     expect(wrapper.html()).to.contain('Starred');
   });
+
+  it('should change between Starred/Non-starred when clicked', () => {
+    let wrapper = shallow(
+      <StarButton />
+    );
+
+    expect(wrapper.html()).to.contain('Non-starred');
+    wrapper.simulate('click');
+    expect(wrapper.html()).to.contain('Starred');
+    wrapper.simulate('click');
+    expect(wrapper.html()).to.contain('Non-starred');
+  });
 });
