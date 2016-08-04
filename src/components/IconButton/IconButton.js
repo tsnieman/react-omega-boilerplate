@@ -26,7 +26,7 @@ const IconButton = (props) => {
 };
 
 IconButton.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
 
   // refer to <Icon /> props
   icon: PropTypes.any.isRequired,
