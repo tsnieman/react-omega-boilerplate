@@ -44,7 +44,7 @@ describe('Github getUser Saga', () => {
     expect(actualYield).to.deep.equal(expectedYield);
   });
 
-  it('should (TODO/WIP) put a setUser action', () => {
+  it('should error if undefined action.username', () => {
     const generator = getUser({});
     const value = generator.next().value;
     expect(value.name).to.contain('Error');
