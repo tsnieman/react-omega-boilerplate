@@ -65,7 +65,7 @@ const Home = () => (
     <Card.Wrapper styleName="card">
       <Card.Media>
         <img
-          src="https://d13yacurqjgara.cloudfront.net/users/73104/screenshots/2626767/test_color.jpg"
+          src="http://i.imgur.com/ftcpvi5.png"
           alt="colorful doodle"
         />
       </Card.Media>
@@ -79,7 +79,7 @@ const Home = () => (
           By Calum Clark.
           {' '}
           <a
-            href="http://i.imgur.com/ftcpvi5.png"
+            href="https://dribbble.com/shots/2626767-Little-hero-sketch-speed-colored"
             target="_blank"
             rel="noopener noreferrer"
           >Check him out on Dribbble</a>.
