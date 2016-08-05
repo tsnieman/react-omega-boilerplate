@@ -13,7 +13,7 @@
      * `animation: keyframeName` because it will
      * be in in :global (block) scope */
     :global(.icon) {
-      animation: scale 0.2s;
+      animation: scale 0.25s;
       animation-iteration-count: 1;
     }
   }
