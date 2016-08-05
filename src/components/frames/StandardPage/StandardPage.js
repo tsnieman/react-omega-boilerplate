@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import styles from './StandardPage.css';
 
-console.log('test?');
 const StandardPage = ({ children }) => (
   <div styleName="page">
     {children}

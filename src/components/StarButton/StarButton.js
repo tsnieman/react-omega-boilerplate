@@ -29,6 +29,7 @@ const StarButton = enhance((props) => {
       {...cleanProps}
       icon={icon}
       onClick={toggleStar}
+      styleName="button"
       style={style}
     >{label}</IconButton>
   );
