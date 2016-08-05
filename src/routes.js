@@ -17,7 +17,6 @@ export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
 
-    {/* TODO why tf isn't this page frame working? */}
     <Route component={StandardPageFrame}>
       <Route path="home" component={HomePage} />
       <Route path="about" component={AboutPage} />
