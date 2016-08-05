@@ -7,10 +7,6 @@
 }
 
 .button {
-  :global .icon {
-    color: red;
-  }
-
   &[data-starred="true"] {
     /* don't just do `:global .icon` or else the
      * @keyframe name will be mismatched w/ the
