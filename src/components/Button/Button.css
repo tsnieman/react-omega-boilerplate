@@ -25,6 +25,22 @@ $button-shadow-transition: 0.12s ease-in-out box-shadow;
 
 $button-border-radius: 2px;
 
+/* used when the button is :disabled and hovered to
+ * indicate that the button isn't usable. */
+@keyframes nope {
+  0% {
+    transform: rotate(0.5deg) translateX(-1px);
+  }
+
+  50% {
+    transform: rotate(-0.25deg) translateX(1px);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .button-base {
   display: inline-block;
 
@@ -49,7 +65,7 @@ $button-border-radius: 2px;
     box-shadow: $shadow-0;
   }
 
-  &[disabled] {
+  &:disabled {
     background: $button-disabled-background-color;
     color: $color-disabled-text;
     border: 1px dashed;
@@ -58,6 +74,12 @@ $button-border-radius: 2px;
     &:hover {
       background: $button-disabled-hover-background-color;
       box-shadow: $shadow-0;
+
+      animation: nope 0.3s;
+      animation-iteration-count: 1;
+      $easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+      animation-timing-function: $easeInCirc;
+      animation-delay: 0.2s;
     }
   }
 
