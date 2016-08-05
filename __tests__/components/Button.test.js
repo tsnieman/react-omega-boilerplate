@@ -20,4 +20,9 @@ describe('Button page component', function() {
     let wrapper = shallow(<Button to="/test" />);
     expect(wrapper.html()).to.contain('<a');
   });
+
+  // TODO more tests...
+  // - pass arbitrary props
+  // - render child content
+  // - etc
 });
