@@ -45,6 +45,10 @@ $button-border-radius: 2px;
     box-shadow: $shadow-1;
   }
 
+  &:active {
+    box-shadow: $shadow-0;
+  }
+
   &[disabled] {
     background: $button-disabled-background-color;
     color: $color-disabled-text;
