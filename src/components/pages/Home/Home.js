@@ -71,11 +71,19 @@ const Home = () => (
       </Card.Media>
 
       <Card.Title>
-        Card Title
+        Little hero sketch, speed colored
       </Card.Title>
 
       <Card.Body>
-        <p>This is Card.Body text.</p>
+        <p>
+          By Calum Clark.
+          {' '}
+          <a
+            href="http://i.imgur.com/ftcpvi5.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Check him out on Dribbble</a>.
+        </p>
       </Card.Body>
 
       <Card.Actions>
