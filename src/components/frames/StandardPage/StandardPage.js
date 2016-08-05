@@ -4,7 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './StandardPage.css';
 
 const StandardPage = ({ children }) => (
-  <div styleName="page">
+  <div styleName="frame">
     {children}
   </div>
 );
