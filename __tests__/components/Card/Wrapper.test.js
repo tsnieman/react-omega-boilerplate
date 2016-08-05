@@ -6,6 +6,7 @@ import Wrapper from 'components/Card/Wrapper'
 import Body from 'components/Card/Body'
 import Title from 'components/Card/Title'
 import Actions from 'components/Card/Actions'
+import Media from 'components/Card/Media'
 
 describe('Wrapper component', function() {
   it('should render null with no props or children', () => {
@@ -84,5 +85,15 @@ describe('Wrapper component', function() {
     );
 
     expect(wrapper.html()).to.contain('card-actions')
+  });
+
+  it('should render Media children', () => {
+    let wrapper = shallow(
+      <Wrapper>
+        <Media>testing</Media>
+      </Wrapper>
+    );
+
+    expect(wrapper.html()).to.contain('card-media')
   });
 });

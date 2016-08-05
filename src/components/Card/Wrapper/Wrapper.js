@@ -11,6 +11,7 @@ const VALID_SUBCOMPONENTS = [
   'Body',
   'Title',
   'Actions',
+  'Media',
 ];
 
 const Wrapper = (props) => {
@@ -42,7 +43,7 @@ const Wrapper = (props) => {
 };
 
 Wrapper.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   className: PropTypes.string,
 };
 

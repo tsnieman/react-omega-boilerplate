@@ -62,6 +62,29 @@ const Home = () => (
         <IconButton icon="warning" variant="inverse" disabled>Disabled</IconButton>
       </Card.Actions>
     </Card.Wrapper>
+    <Card.Wrapper styleName="card">
+      <Card.Media>
+        <img
+          src="https://d13yacurqjgara.cloudfront.net/users/73104/screenshots/2626767/test_color.jpg"
+          alt="colorful doodle"
+        />
+      </Card.Media>
+
+      <Card.Title>
+        Card Title
+      </Card.Title>
+
+      <Card.Body>
+        <p>This is Card.Body text.</p>
+      </Card.Body>
+
+      <Card.Actions>
+        <IconButton icon="comment">Comment</IconButton>
+        <IconButton icon="more-v" />
+
+        <StarButton styleName="right-button" />
+      </Card.Actions>
+    </Card.Wrapper>
   </div>
 );
 
