@@ -21,8 +21,44 @@ describe('Button page component', function() {
     expect(wrapper.html()).to.contain('<a');
   });
 
-  // TODO more tests...
-  // - pass arbitrary props
-  // - render child content
-  // - etc
+  it('should have .button class', () => {
+    let wrapper = shallow(
+      <Button>
+        testing
+      </Button>
+    );
+
+    expect(wrapper.find('.button')).to.have.length(1);
+  });
+
+  it('should pass-through class via className (and still have .button class)', () => {
+    let wrapper = shallow(
+      <Button className="test-class">
+        testing
+      </Button>
+    );
+
+    expect(wrapper.find('.test-class')).to.have.length(1);
+    expect(wrapper.find('.button')).to.have.length(1);
+  });
+
+  it('should pass on arbitrary props', () => {
+    let wrapper = shallow(
+      <Button data-arbitrary>
+        testing
+      </Button>
+    );
+
+    expect(wrapper.find('[data-arbitrary]')).to.have.length(1);
+  });
+
+  it('should render content/children', () => {
+    let wrapper = shallow(
+      <Button>
+        testing
+      </Button>
+    );
+
+    expect(wrapper.html()).to.contain('testing')
+  });
 });
