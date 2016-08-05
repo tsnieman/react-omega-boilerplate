@@ -31,6 +31,7 @@ const StarButton = enhance((props) => {
       onClick={toggleStar}
       styleName="button"
       style={style}
+      data-starred={starred}
     >{label}</IconButton>
   );
 });
