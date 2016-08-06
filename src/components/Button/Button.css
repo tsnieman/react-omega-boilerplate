@@ -51,6 +51,7 @@ $button-border-radius: 2px;
   padding: $button-padding;
 
   font-family: $site-font-family;
+  line-height: 1;
 
   /* should buttons never be pointers? https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b#.mxi539ydo */
   cursor: default; 

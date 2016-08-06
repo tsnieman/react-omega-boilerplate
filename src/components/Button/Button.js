@@ -47,11 +47,11 @@ const Button = (props) => {
   const isLink = !!to;
   return isLink ? (
     <Link {...cleanProps}>
-      {children}
+      <span>{children}</span>
     </Link>
   ) : (
     <button {...cleanProps}>
-      {children}
+      <span>{children}</span>
     </button>
   );
 };

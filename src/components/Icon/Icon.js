@@ -108,10 +108,11 @@ const Icon = (props) => {
   let graphic = graphics.get(props.icon);
 
   const cleanProps = { ...props };
+  delete cleanProps.icon; // Icon-specific
   delete cleanProps.styles; // avoid react-css-modules related errors
 
   return (
-    <span {...cleanProps}>
+    <span {...cleanProps} styleName="wrapper">
       <svg
         viewBox="0 0 24 24"
         preserveAspectRatio="xMidYMid meet"

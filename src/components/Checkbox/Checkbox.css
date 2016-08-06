@@ -33,6 +33,13 @@
   overflow: hidden;
   user-select: none;
 
+  /* Icons are a bit small by default
+   * to be */
+  :global(.icon) {
+    width: 1.4em;
+    height: 1.4em;
+  }
+
   &[data-checked="true"] :global(.icon) {
     animation: fade-in 0.15s;
     animation-iteration-count: 1;

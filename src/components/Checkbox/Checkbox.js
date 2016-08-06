@@ -48,10 +48,7 @@ class Checkbox extends React.Component {
         onClick={this.toggleCheck}
         data-checked={checked}
       >
-        <Icon
-          icon={icon}
-          size="1.4em"
-        >{children}</Icon>
+        <Icon icon={icon}>{children}</Icon>
       </div>
     );
   }
