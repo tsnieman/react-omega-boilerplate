@@ -5,6 +5,7 @@ import styles from './About.css';
 
 // Components
 import Card from 'components/Card';
+import Checkbox from 'components/Checkbox';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
@@ -28,6 +29,13 @@ const About = ({ users }) => (
             );
           })}
         </ul>
+
+        <br />
+
+        <label>
+          <Checkbox />
+          Checkbox!
+        </label>
       </Card.Body>
     </Card.Wrapper>
   </div>
