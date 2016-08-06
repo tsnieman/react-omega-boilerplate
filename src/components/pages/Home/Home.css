@@ -3,13 +3,9 @@
 .page {
 }
 
-.header {
- composes: body-text from 'styles/_typography.css';
- margin-bottom: 1rem;
-
-  h1 {
-    text-align: center;
-  }
+.title {
+  composes: body-text from 'styles/_typography.css';
+  text-align: center;
 }
 
 .card {

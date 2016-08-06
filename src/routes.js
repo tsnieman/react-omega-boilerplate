@@ -12,14 +12,17 @@ import AboutPage from 'containers/pages/About';
 
 // Frames
 import StandardPageFrame from 'components/frames/StandardPage';
+import AppHeaderFrame from 'components/frames/AppHeader';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
+    <Route component={AppHeaderFrame}>
+      <Route component={StandardPageFrame}>
+        <IndexRoute component={HomePage} />
 
-    <Route component={StandardPageFrame}>
-      <Route path="home" component={HomePage} />
-      <Route path="about" component={AboutPage} />
+        <Route path="home" component={HomePage} />
+        <Route path="about" component={AboutPage} />
+      </Route>
     </Route>
   </Route>
 );

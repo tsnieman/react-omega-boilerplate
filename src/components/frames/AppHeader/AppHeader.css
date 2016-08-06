@@ -1,0 +1,18 @@
+@import 'styles/_variables';
+
+.frame {
+}
+
+.header {
+  composes: body-text from 'styles/_typography.css';
+  margin-bottom: 1rem;
+  padding: 1em;
+  background: $color-white;
+  border-bottom: 1px solid $color-gray-80;
+
+  nav {
+    > * + * {
+      margin-left: 1em;
+    }
+  }
+}

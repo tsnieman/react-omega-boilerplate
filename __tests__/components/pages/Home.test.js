@@ -12,7 +12,6 @@ describe('Home page component', function() {
 
   it('Should have "Home" on the page', () => {
     let wrapper = shallow(<Home />);
-    expect(wrapper.find('Link')).to.exist;
     expect(wrapper.text()).to.contain('Home');
   });
 });

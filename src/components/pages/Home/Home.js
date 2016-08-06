@@ -8,20 +8,13 @@ import Button from 'components/Button';
 import StarButton from 'components/StarButton';
 import IconButton from 'components/IconButton';
 import Card from 'components/Card';
-import Icon from 'components/Icon';
-import { Link } from 'react-router';
+// import Icon from 'components/Icon';
+// import { Link } from 'react-router';
 
 const Home = () => (
   <div styleName="page">
-    <header styleName="header">
+    <header styleName="title">
       <h1>Home</h1>
-
-      <nav>
-        {/* TODO route helper */}
-        <Link to={'/about'}>
-          <Icon icon="info" /> About
-        </Link>
-      </nav>
     </header>
 
     <Card.Wrapper styleName="card">
