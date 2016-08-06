@@ -15,6 +15,7 @@ const StarButton = enhance((props) => {
   } = props;
 
   const cleanProps = { ...props };
+  delete cleanProps.styles; // avoid react-css-modules related errors
   delete cleanProps.starred; // StarButton-specific
   delete cleanProps.setStarred; // StarButton-specific
 

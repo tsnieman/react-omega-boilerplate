@@ -7,10 +7,6 @@ import styles from './IconButton.css';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 
-/* TODO why can't I use styleName for the label?
- * "module not found" sort of errors... seems to be
- * partially because of ...props (...cleanProps) */
-
 const IconButton = (props) => {
   const {
     children,
@@ -23,19 +19,7 @@ const IconButton = (props) => {
   return (
     <Button {...cleanProps}>
       <Icon icon={icon} />
-      {/*
-        TODO revisit icon alignment vs label alignment,
-        this is kinda ugly
-      */}
-      {children && (
-        <span
-          style={{
-            display: 'inline',
-            verticalAlign: '0.15em',
-            marginLeft: '0.25em',
-          }}
-        >{children}</span>
-      )}
+      {children && <span styleName="label">{children}</span>}
     </Button>
   );
 };
