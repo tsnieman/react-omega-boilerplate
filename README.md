@@ -50,9 +50,11 @@ This means that you shouldn't count on testing 'composes'-related stuff.
   - http://postcss.parts/
 - [ ] investigate setting up basic CLI generator (i.e. 'generate component MyComponent' -> outputs components in proper place)
 - replace isomorphic fetch with fetch-wg or whatever (this boilerplate isn't isomorphic)
+- consider switching to [redux-router](https://github.com/acdlite/redux-router) ([reasons](https://github.com/acdlite/redux-router#differences-with-react-router-redux))
 
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.
 - My teammates at Spatially who have taught and shown me so much.
 - github user @r31gN who wrote [this TDD guide](http://thereignn.ghost.io/a-step-by-step-tdd-approach-on-testing-react-components-using-enzyme/)
 - github user @istarkov who made the awesome [babel-plugin-webpack-loaders](/istarkov/babel-plugin-webpack-loaders)
+- github user @dmfrancisco for their awesome [react icons example](http://dmfrancisco.github.io/react-icons/)
