@@ -7,6 +7,10 @@ import styles from './IconButton.css';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 
+/* TODO why can't I use styleName for the label?
+ * "module not found" sort of errors... seems to be
+ * partially because of ...props (...cleanProps) */
+
 const IconButton = (props) => {
   const {
     children,
@@ -15,7 +19,6 @@ const IconButton = (props) => {
 
   const cleanProps = { ...props };
   delete cleanProps.styles; // avoid react-css-modules related errors
-  console.log({ styles });
 
   return (
     <Button {...cleanProps}>
@@ -31,9 +34,7 @@ const IconButton = (props) => {
             verticalAlign: '0.15em',
             marginLeft: '0.25em',
           }}
-        >
-          {children}
-        </span>
+        >{children}</span>
       )}
     </Button>
   );

@@ -1,1 +1,7 @@
 @import 'styles/_variables';
+
+/* TODO why can't I use styleName for the label?
+ * "module not found" sort of errors... seems to be
+ * partially because of ...props (...cleanProps) */
+.label {
+}
