@@ -48,6 +48,8 @@ This means that you shouldn't count on testing 'composes'-related stuff.
   - css variables https://github.com/MadLittleMods/postcss-css-variables
   - map might be particularly handy https://github.com/pascalduez/postcss-map
   - http://postcss.parts/
+- [ ] investigate setting up basic CLI generator (i.e. 'generate component MyComponent' -> outputs components in proper place)
+- replace isomorphic fetch with fetch-wg or whatever (this boilerplate isn't isomorphic)
 
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.
