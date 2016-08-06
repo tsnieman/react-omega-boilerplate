@@ -33,17 +33,17 @@
   overflow: hidden;
   user-select: none;
 
-  &[data-checked="true"] {
+  &[data-checked="true"] .icon {
     animation: fade-in 0.15s;
     animation-iteration-count: 1;
   }
 }
 
-.input {
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: scale(2);
+.icon {
+  vertical-align: middle;
+}
+
+.label {
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -96,8 +96,7 @@ const graphics = new Map([
 
 const Icon = (props) => {
   const iconStyle = {
-    display: 'inline-block',
-    verticalAlign: '-0.1em',
+    display: 'inline',
     fill: 'currentcolor',
     width: props.size, // CSS instead of the width attr to support non-pixel units
     height: props.size, // Prevents scaling issue in IE

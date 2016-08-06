@@ -29,14 +29,15 @@ class Checkbox extends React.Component {
 
   render() {
     const {
+      children,
+    } = this.props;
+    const {
       checked,
     } = this.state;
 
     const cleanProps = { ...this.props };
     delete cleanProps.checked; // Checkbox-specific
     delete cleanProps.styles; // CSS modules-specific
-    delete cleanProps.children; // input is a void element tag and must neither have
-                                // `children` nor use `dangerouslySetInnerHTML`.
 
     const icon = checked ? 'check-box' : 'check-box-outline-blank';
 
@@ -50,13 +51,25 @@ class Checkbox extends React.Component {
         <Icon
           icon={icon}
           size="1.4em"
+          styleName="icon"
         />
+
+        {children ? (
+          ' '
+        ) : null}
+
+        {children ? (
+          <span styleName="label">
+            {children}
+          </span>
+        ) : null}
       </div>
     );
   }
 }
 
 Checkbox.propTypes = {
+  children: PropTypes.any,
   checked: PropTypes.bool,
 };
 

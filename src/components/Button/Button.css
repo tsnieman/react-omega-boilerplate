@@ -6,19 +6,23 @@ $button-padding: $button-padding-v $button-padding-h;
 
 $button-default-background-color: color($color-black alpha(0.1));
 $button-default-hover-background-color: color($button-default-background-color alpha(0.2));
+$button-default-active-background-color: color($button-default-background-color lightness(-15%));
 
 $button-inverse-background-color: color($color-white alpha(0.1));
 $button-inverse-hover-background-color: color($button-inverse-background-color alpha(0.2));
 $button-inverse-color: $color-light-on-dark;
+$button-inverse-active-background-color: color($button-inverse-background-color lightness(-15%));
 
 $button-disabled-background-color: color($color-disabled-background alpha(0.2));
 $button-disabled-hover-background-color: color($button-disabled-background-color);
 
 $button-negative-background-color: color($color-negative);
 $button-negative-hover-background-color: color($button-negative-background-color lightness(-10%));
+$button-negative-active-background-color: color($button-negative-background-color lightness(-15%));
 
 $button-positive-background-color: color($color-positive);
-$button-positive-hover-background-color: color($button-positive-background-color lightness(+10%));
+$button-positive-hover-background-color: color($button-positive-background-color lightness(-10%));
+$button-positive-active-background-color: color($button-positive-background-color lightness(-15%));
 
 $button-background-transition: 0.12s ease-in-out background;
 $button-shadow-transition: 0.12s ease-in-out box-shadow;
@@ -97,6 +101,10 @@ $button-border-radius: 2px;
   &:hover {
     background: $button-default-hover-background-color;
   }
+
+  &:active {
+    background: $button-default-active-background-color;
+  }
 }
 
 .button-inverse {
@@ -106,6 +114,10 @@ $button-border-radius: 2px;
 
   &:hover {
     background: $button-inverse-hover-background-color;
+  }
+
+  &:active {
+    background: $button-inverse-active-background-color;
   }
 }
 
@@ -119,6 +131,10 @@ $button-border-radius: 2px;
   &:hover {
     background: $button-negative-hover-background-color;
   }
+
+  &:active {
+    background: $button-negative-active-background-color;
+  }
 }
 
 .button-positive {
@@ -129,6 +145,10 @@ $button-border-radius: 2px;
 
   &:hover {
     background: $button-positive-hover-background-color;
+  }
+
+  &:active {
+    background: $button-positive-active-background-color;
   }
 }
 

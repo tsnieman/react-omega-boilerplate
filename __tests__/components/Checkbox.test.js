@@ -18,14 +18,14 @@ describe('Checkbox component', function() {
     expect(wrapper.find('[data-arbitrary]')).to.have.length(1);
   });
 
-  it('should not render content/children', () => {
+  it('should render content/children', () => {
     let wrapper = shallow(
       <Checkbox>
         testing
       </Checkbox>
     );
 
-    expect(wrapper.html()).to.not.contain('testing');
+    expect(wrapper.html()).to.contain('testing');
   });
 
   it('should be [data-checked="true"] when checked', () => {

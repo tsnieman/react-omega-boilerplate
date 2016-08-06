@@ -15,12 +15,26 @@ const IconButton = (props) => {
 
   const cleanProps = { ...props };
   delete cleanProps.styles; // avoid react-css-modules related errors
+  console.log({ styles });
 
   return (
     <Button {...cleanProps}>
       <Icon icon={icon} />
-      {children && ' '}
-      {children}
+      {/*
+        TODO revisit icon alignment vs label alignment,
+        this is kinda ugly
+      */}
+      {children && (
+        <span
+          style={{
+            display: 'inline',
+            verticalAlign: '0.15em',
+            marginLeft: '0.25em',
+          }}
+        >
+          {children}
+        </span>
+      )}
     </Button>
   );
 };

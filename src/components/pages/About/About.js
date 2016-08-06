@@ -33,8 +33,7 @@ const About = ({ users }) => (
         <br />
 
         <label>
-          <Checkbox />
-          Checkbox!
+          <Checkbox>Checkbox (with a label)</Checkbox>
         </label>
       </Card.Body>
     </Card.Wrapper>
