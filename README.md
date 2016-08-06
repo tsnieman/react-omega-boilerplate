@@ -52,6 +52,7 @@ This means that you shouldn't count on testing 'composes'-related stuff.
 - replace isomorphic fetch with fetch-wg or whatever (this boilerplate isn't isomorphic)
 - consider switching to [redux-router](https://github.com/acdlite/redux-router) ([reasons](https://github.com/acdlite/redux-router#differences-with-react-router-redux))
 - Icon + text alignments are kinda screwy. (especially in `IconButton`)
+- IconButton taller than Button
 
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.
