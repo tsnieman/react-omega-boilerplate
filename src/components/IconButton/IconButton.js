@@ -18,8 +18,9 @@ const IconButton = (props) => {
 
   return (
     <Button {...cleanProps}>
-      <Icon icon={icon} />
-      {children && <span styleName="label">{children}</span>}
+      <Icon icon={icon}>
+        {children}
+      </Icon>
     </Button>
   );
 };

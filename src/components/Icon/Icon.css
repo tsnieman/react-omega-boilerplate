@@ -1,0 +1,11 @@
+.icon {
+  fill: currentcolor;
+  width: 1em;
+  height: 1em;
+}
+
+.label {
+  display: inline;
+  vertical-align: 0.15em;
+  margin-left: 0.25em;
+}

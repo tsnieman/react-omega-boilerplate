@@ -67,6 +67,7 @@ $button-border-radius: 2px;
 
   &:active {
     box-shadow: $shadow-0;
+    transition: none;
   }
 
   &:disabled {

@@ -51,18 +51,7 @@ class Checkbox extends React.Component {
         <Icon
           icon={icon}
           size="1.4em"
-          styleName="icon"
-        />
-
-        {children ? (
-          ' '
-        ) : null}
-
-        {children ? (
-          <span styleName="label">
-            {children}
-          </span>
-        ) : null}
+        >{children}</Icon>
       </div>
     );
   }

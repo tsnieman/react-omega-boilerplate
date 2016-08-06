@@ -1,5 +1,7 @@
 // Basics
 import React, { PropTypes } from 'react';
+import cssModules from 'react-css-modules';
+import styles from './Icon.css';
 
 // Get additional icons (cases) from
 // http://dmfrancisco.github.io/react-icons/
@@ -91,46 +93,43 @@ const graphics = new Map([
     'check-box-outline-blank',
     <g><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path></g>,
   ],
+  [
+    'home',
+    <g><path d="M10 20v-6h4v6h5v-8h3l-10-9-10 9h3v8z"></path></g>,
+  ],
 ]);
 /* eslint-enable max-len */
 
 const Icon = (props) => {
-  const iconStyle = {
-    display: 'inline',
-    fill: 'currentcolor',
-    width: props.size, // CSS instead of the width attr to support non-pixel units
-    height: props.size, // Prevents scaling issue in IE
-    ...props.style,
-  };
+  const {
+    children,
+  } = props;
 
   let graphic = graphics.get(props.icon);
 
+  const cleanProps = { ...props };
+  delete cleanProps.styles; // avoid react-css-modules related errors
+
   return (
-    <svg
-      viewBox="0 0 24 24"
-      preserveAspectRatio="xMidYMid meet"
-      style={{
-        ...iconStyle,
-        ...props.style,
-      }}
-      className={`${props.className} icon`}
-      onClick={props.onClick}
-    >{graphic}</svg>
+    <span {...cleanProps}>
+      <svg
+        viewBox="0 0 24 24"
+        preserveAspectRatio="xMidYMid meet"
+        styleName="icon"
+        className="icon"
+      >{graphic}</svg>
+
+      {children && <span styleName="label">{children}</span>}
+    </span>
   );
 };
 
 Icon.propTypes = {
+  children: PropTypes.any,
   icon: PropTypes.string.isRequired,
-  size: PropTypes.any,
-  style: PropTypes.object,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 Icon.defaultProps = {
-  size: '1em',
-  className: '',
-  onClick: () => {},
 };
 
-export default Icon;
+export default cssModules(Icon, styles);
