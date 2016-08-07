@@ -15,6 +15,8 @@
 }
 
 .wrapper {
+  user-select: none;
+
   /* Icons are a bit small by default
    * to be */
   :global(.icon) {
