@@ -120,7 +120,12 @@ const Icon = (props) => {
         className="icon"
       >{graphic}</svg>
 
-      {children && <span styleName="label">{children}</span>}
+      {children && (
+        <span
+          styleName="label"
+          className="label"
+        >{children}</span>
+      )}
     </span>
   );
 };

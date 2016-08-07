@@ -18,7 +18,7 @@ const IconButton = (props) => {
 
   return (
     <Button {...cleanProps}>
-      <Icon icon={icon}>
+      <Icon icon={icon} styleName="icon">
         {children}
       </Icon>
     </Button>

@@ -1,12 +1,12 @@
 .wrapper {
+  display: inline;
 }
 
 .icon {
-  display: inline-block;
-  vertical-align: bottom;
   fill: currentcolor;
   width: 1em;
-  height: 1em;
+  height: 0.83399em; /* or else icons are slightly bigger than font size.
+                        noticed when when IconButton was bigger than Button */
 }
 
 .label {

@@ -50,6 +50,7 @@ $button-border-radius: 2px;
 
   padding: $button-padding;
 
+  font-size: $body-font-size;
   font-family: $site-font-family;
   line-height: 1;
 

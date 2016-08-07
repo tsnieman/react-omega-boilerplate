@@ -1,1 +1,6 @@
 @import 'styles/_variables';
+
+.icon {
+  display: inline-block;
+  margin-top: -0.1em; /* TODO not sure why Icon + text aren't vertically centered in Button */
+}

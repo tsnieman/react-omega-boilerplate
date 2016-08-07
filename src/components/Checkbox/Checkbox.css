@@ -14,30 +14,20 @@
   }
 }
 
-.button {
-  &[data-starred="true"] {
-    /* don't just do `:global .icon` or else the
-     * @keyframe name will be mismatched w/ the
-     * `animation: keyframeName` because it will
-     * be in in :global (block) scope */
-    :global(.icon) {
-      animation: scale 0.25s;
-      animation-iteration-count: 1;
-    }
-  }
-}
-
 .wrapper {
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-  user-select: none;
-
   /* Icons are a bit small by default
    * to be */
   :global(.icon) {
-    width: 1.4em;
-    height: 1.4em;
+    font-size: 2.5em;
+
+    /* TODO ugh, what an ugly hack to align
+     * Icon with text...  :/ ... */
+    display: inline-block;
+    vertical-align: middle;
+    + :global(.label) {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   &[data-checked="true"] :global(.icon) {
