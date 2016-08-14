@@ -8,6 +8,7 @@ import Button from 'components/Button';
 import StarButton from 'components/StarButton';
 import IconButton from 'components/IconButton';
 import Card from 'components/Card';
+import Checkbox from 'components/Checkbox';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
@@ -26,6 +27,10 @@ const Home = () => (
         <p>This is Card.Body text.</p>
         <br />
         <Button variant="positive" disabled>[disabled] button</Button>
+        <br />
+        <label>
+          <Checkbox>Checkbox (with a label)</Checkbox>
+        </label>
       </Card.Body>
 
       <Card.Actions>
