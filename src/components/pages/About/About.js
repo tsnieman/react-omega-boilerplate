@@ -4,48 +4,23 @@ import cssModules from 'react-css-modules';
 import styles from './About.css';
 
 // Components
-import Card from 'components/Card';
-import Checkbox from 'components/Checkbox';
+import GithubUser from 'containers/GithubUser';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
-const About = ({ users }) => (
+const About = () => (
   <div styleName="page">
     <h1>About</h1>
 
-    <Card.Wrapper>
-      <Card.Title>
-        Users
-      </Card.Title>
-
-      <Card.Body>
-        <ul>
-          {Object.keys(users).map((userId) => {
-            const user = users[userId];
-            return (
-              <li key={userId}>
-                <strong>Name:</strong> {user.name}
-              </li>
-            );
-          })}
-        </ul>
-
-        <br />
-
-        <label>
-          <Checkbox>Checkbox (with a label)</Checkbox>
-        </label>
-      </Card.Body>
-    </Card.Wrapper>
+    <GithubUser username="tsnieman" />
   </div>
 );
 
 About.propTypes = {
-  users: PropTypes.object.isRequired,
+  TODO: PropTypes.any,
 };
 
 About.defaultProps = {
-  users: {},
 };
 
 export default cssModules(About, styles);
