@@ -13,6 +13,10 @@ const About = () => (
     <div styleName="intro">
       <h1>About</h1>
       <p>Humans who have contributed to this repo.</p>
+      <small>
+        Note: loading intentionally delayed (less than 2 seconds)
+        to show off the fancy loading effect.
+      </small>
     </div>
 
     <ul>

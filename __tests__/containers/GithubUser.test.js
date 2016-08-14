@@ -13,7 +13,7 @@ describe('GithubUser container', function() {
   // TODO unprovided `username` case?
 
   // TODO come back after loader/spinner is done
-  it('displays "Loading" when given a username', () => {
+  it('displays GithubUser[loading=true] when given a username', () => {
     const fakeStore = configureStore();
 
     let wrapper = mount(
@@ -22,7 +22,7 @@ describe('GithubUser container', function() {
       </Provider>
     );
 
-    expect(wrapper.text().indexOf('Loading')).to.be.above(-1);
+    expect(wrapper.find('GithubUser').props().loading).to.equal(true);
   });
 
   it('displays GithubUser when given a user', () => {
@@ -37,7 +37,6 @@ describe('GithubUser container', function() {
       </Provider>
     );
 
-    // console.log({ wrapper: wrapper.debug() });
     expect(wrapper.find('GithubUser')).to.have.length(1);
   });
 });

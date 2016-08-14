@@ -11,13 +11,19 @@ class GithubUserContainer extends React.Component {
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
     if (!this.props.user) this.props.getUser('tsnieman');
+    // TODO onFailure/onSuccess set local state.loading = false
   }
 
   render() {
     const { user } = this.props;
 
-    // TODO loader/spinner! that's always a fun component.
-    if (!user) return <span>Loading Github User...</span>;
+    if (!user) {
+      return (
+        <GithubUser
+          loading
+        />
+      );
+    }
 
     return (
       <GithubUser

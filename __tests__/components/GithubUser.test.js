@@ -12,6 +12,12 @@ describe('GithubUser page component', function() {
     expect(wrapper.text().indexOf('not found')).to.be.above(-1);
   });
 
+  it('Should render "loading" state when passed loading=true', () => {
+    let wrapper = shallow(<GithubUser loading={true} />);
+    // TODO verify loading state
+    expect(wrapper).to.exist;
+  });
+
   it('Should exist when given a `user` object', () => {
     let wrapper = shallow(<GithubUser user={{}} />);
     expect(wrapper).to.exist;

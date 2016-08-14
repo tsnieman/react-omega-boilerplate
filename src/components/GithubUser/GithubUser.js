@@ -8,10 +8,48 @@ import Card from 'components/Card';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
-const GithubUser = ({ user }) => {
+const GithubUser = ({ user, loading }) => {
+  if (loading) {
+    return (
+      <Card.Wrapper styleName="wrapper">
+        <Card.Media>
+          {/* TODO loader/spinner */}
+          <img
+            src="http://placehold.it/350x350?text=Loading"
+            alt="placeholder avatar while loading"
+          />
+        </Card.Media>
+
+        <Card.Title>
+          <span styleName="loading-text">
+            ████████████
+          </span>
+        </Card.Title>
+
+        <Card.Body>
+          <dl>
+            <dt>followers</dt>
+            <dd>
+              <span styleName="loading-text">
+                ███
+              </span>
+            </dd>
+
+            <dt>following</dt>
+            <dd>
+              <span styleName="loading-text">
+                ███
+              </span>
+            </dd>
+          </dl>
+        </Card.Body>
+      </Card.Wrapper>
+    );
+  }
+
   if (!user) {
     return (
-      <div styleName="wrapper">
+      <div>
         Github user not found.
       </div>
     );
@@ -49,10 +87,12 @@ const GithubUser = ({ user }) => {
 };
 
 GithubUser.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
+  loading: PropTypes.bool,
 };
 
 GithubUser.defaultProps = {
+  loading: false,
 };
 
 export default cssModules(GithubUser, styles);

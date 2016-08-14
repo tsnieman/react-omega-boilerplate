@@ -3,6 +3,7 @@ import { takeLatest } from 'redux-saga';
 import { put, call, cancelled } from 'redux-saga/effects';
 import actions from 'actions';
 import services from 'services';
+import delay from 'helpers/delay';
 
 // Constants
 import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
@@ -12,6 +13,9 @@ export function* getUser(action = {}) {
     if (!action.username) throw new Error('No username provided');
 
     const { username, options } = action;
+
+    // For illustrative effect of the "Loading" state of components/GithubUser
+    yield call(delay, 1500);
 
     const fetchedUser = yield call(services.github.fetchUser, username);
 
