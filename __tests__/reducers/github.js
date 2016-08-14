@@ -16,7 +16,7 @@ describe('Github reducers', () => {
 
   it('should handle SET_USER', () => {
     const initialState = {};
-    const user = { id: 1234 };
+    const user = { id: 1234, login: 'github' };
 
     const state = githubReducer(initialState, {
       type: GITHUB_ACTIONS.SET_USER,
@@ -25,7 +25,7 @@ describe('Github reducers', () => {
 
     expect(state).to.deep.equal({
       users: {
-        [user.id]: user,
+        [user.login]: user,
       },
     });
   });

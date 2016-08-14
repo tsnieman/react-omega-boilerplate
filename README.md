@@ -16,6 +16,10 @@
   - redux-devtools-dock-monitor
   - redux-devtools-log-monitor
 
+# Install requirements
+- Use a newer version of nodejs; I use `v6.3.1` (TODO be more specific about minimum requirement)
+- Install [jest](https://github.com/facebook/jest) (used for unit testing) globally
+
 # Oddities
 **Note about warning which says "[react-router] You cannot change ; it will be ignored",**
 -- this warning is harmless, we just can't disable it.
@@ -53,6 +57,9 @@ This means that you shouldn't count on testing 'composes'-related stuff.
 - consider switching to [redux-router](https://github.com/acdlite/redux-router) ([reasons](https://github.com/acdlite/redux-router#differences-with-react-router-redux))
 - Icon + text alignments are kinda screwy. (especially in `IconButton`)
 - IconButton taller than Button
+- Read/control order of Card.Wrapper children
+- Make a `<Text>` component which wraps its `children` in a div with style module `composes: body-text from 'styles/_typography.css';`
+- **Move TODOs to github issues?**
 
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.

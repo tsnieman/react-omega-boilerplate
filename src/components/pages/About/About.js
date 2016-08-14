@@ -10,9 +10,16 @@ import GithubUser from 'containers/GithubUser';
 
 const About = () => (
   <div styleName="page">
-    <h1>About</h1>
+    <div styleName="intro">
+      <h1>About</h1>
+      <p>Humans who have contributed to this repo.</p>
+    </div>
 
-    <GithubUser username="tsnieman" />
+    <ul>
+      <li styleName="human">
+        <GithubUser username="tsnieman" />
+      </li>
+    </ul>
   </div>
 );
 

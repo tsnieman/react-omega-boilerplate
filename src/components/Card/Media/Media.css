@@ -4,4 +4,15 @@
 .wrapper {
   margin: -$content-padding;
   margin-bottom: 0;
+
+  /* TODO remove when Card.Wrapper children ordering is coded. */
+  /* kinda funky, but it works. */
+  &:nth-child(n+2) {
+    margin-top: 0;
+  }
+
+  /* TODO Too opinionated? Fairly safe assumption? */
+  > img {
+    width: 100%;
+  }
 }

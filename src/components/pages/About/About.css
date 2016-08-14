@@ -2,3 +2,13 @@
 
 .page {
 }
+
+.intro {
+  composes: body-text from 'styles/_typography.css';
+  margin-bottom: 1rem;
+}
+
+.human {
+  max-width: 15rem;
+  text-align: center;
+}

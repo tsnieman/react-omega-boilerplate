@@ -12,7 +12,8 @@ const reducers = {
     ...state,
     users: {
       ...state.users,
-      [action.user.id]: action.user,
+      // TODO use ID instead? then how do i efficiently pull a user by 'login' (username)?
+      [action.user.login]: action.user,
     },
   }),
 };
