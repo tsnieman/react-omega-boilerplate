@@ -2,14 +2,3 @@
 
 .wrapper {
 }
-
-@keyframes dim-blink {
-  50% {
-    opacity: 0.25;
-  }
-}
-
-.loading-text {
-  animation: dim-blink 1.25s;
-  animation-iteration-count: infinite;
-}

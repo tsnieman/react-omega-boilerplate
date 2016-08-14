@@ -4,11 +4,13 @@ import cssModules from 'react-css-modules';
 import styles from './GithubUser.css';
 
 // Components
+import BodyText from 'components/BodyText';
 import Card from 'components/Card';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
 const GithubUser = ({ user, loading }) => {
+  // TODO DRY-er.
   if (loading) {
     return (
       <Card.Wrapper styleName="wrapper">
@@ -21,25 +23,25 @@ const GithubUser = ({ user, loading }) => {
         </Card.Media>
 
         <Card.Title>
-          <span styleName="loading-text">
-            ████████████
-          </span>
+          <BodyText loading>
+            @Username
+          </BodyText>
         </Card.Title>
 
         <Card.Body>
           <dl>
             <dt>followers</dt>
             <dd>
-              <span styleName="loading-text">
-                ███
-              </span>
+              <BodyText loading>
+                ###
+              </BodyText>
             </dd>
 
             <dt>following</dt>
             <dd>
-              <span styleName="loading-text">
-                ███
-              </span>
+              <BodyText loading>
+                ###
+              </BodyText>
             </dd>
           </dl>
         </Card.Body>

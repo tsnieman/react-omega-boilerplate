@@ -1,5 +1,16 @@
 @import 'styles/_variables';
 
+@keyframes dim-blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
 .wrapper {
   composes: body-text from 'styles/_typography.css';
+}
+
+.wrapper-loading {
+  animation: dim-blink 1.25s;
+  animation-iteration-count: infinite;
 }
