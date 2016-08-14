@@ -4,7 +4,6 @@
 }
 
 .intro {
-  composes: body-text from 'styles/_typography.css';
   margin-bottom: 1rem;
 }
 

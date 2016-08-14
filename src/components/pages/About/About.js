@@ -5,19 +5,20 @@ import styles from './About.css';
 
 // Components
 import GithubUser from 'containers/GithubUser';
+import BodyText from 'components/BodyText';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
 const About = () => (
   <div styleName="page">
-    <div styleName="intro">
+    <BodyText styleName="intro">
       <h1>About</h1>
       <p>Humans who have contributed to this repo.</p>
       <small>
         Note: loading intentionally delayed (less than 2 seconds)
         to show off the fancy loading effect.
       </small>
-    </div>
+    </BodyText>
 
     <ul>
       <li styleName="human">

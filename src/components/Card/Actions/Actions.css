@@ -2,8 +2,6 @@
 @import '../Card';
 
 .wrapper {
-  composes: body-text from 'styles/_typography.css';
-
   :global {
     .button {
       + .button {

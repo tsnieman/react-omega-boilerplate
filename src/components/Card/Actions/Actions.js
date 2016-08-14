@@ -4,6 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './Actions.css';
 
 // Components
+import BodyText from 'components/BodyText';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
@@ -18,9 +19,9 @@ const Actions = (props) => {
 
   if (children) {
     return (
-      <div {...cleanProps} styleName="wrapper" className={`${className} card-actions`}>
+      <BodyText {...cleanProps} styleName="wrapper" className={`${className} card-actions`}>
         {children}
-      </div>
+      </BodyText>
     );
   }
 

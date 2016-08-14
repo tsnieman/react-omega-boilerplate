@@ -4,6 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './Title.css';
 
 // Components
+import BodyText from 'components/BodyText';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
@@ -18,11 +19,11 @@ const Title = (props) => {
 
   if (children) {
     return (
-      <div {...cleanProps} styleName="wrapper" className={`${className} card-title`}>
+      <BodyText {...cleanProps} styleName="wrapper" className={`${className} card-title`}>
         <span styleName="title-text" className="card-title-text">
           {children}
         </span>
-      </div>
+      </BodyText>
     );
   }
 

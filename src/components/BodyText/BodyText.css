@@ -1,0 +1,5 @@
+@import 'styles/_variables';
+
+.wrapper {
+  composes: body-text from 'styles/_typography.css';
+}
