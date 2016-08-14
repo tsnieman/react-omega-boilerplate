@@ -4,7 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 
 import Icon from 'components/Icon';
 
-describe('Icon page component', function() {
+describe('Icon component', function() {
   it('Should exist', () => {
     let wrapper = shallow(<Icon />);
     expect(wrapper).to.exist;
