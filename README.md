@@ -34,33 +34,6 @@ Relevant bug: https://github.com/istarkov/babel-plugin-webpack-loaders/issues/97
 The solution in this repo: [a custom loader](/blob/master/remove-composes.js) which removes 'composes' in test mode entirely.
 This means that you shouldn't count on testing 'composes'-related stuff.
 
-# TODO
-- [ ] error system (well, more like a general 'alert' system)
-- [ ] add explanations about each tech in [Pieces section](#Pieces)
-- [x] testing
-  - jest + webpack : https://facebook.github.io/jest/docs/tutorial-webpack.html
-  - enzyme + jest + mocha(|ava|tape|jasmine) : https://semaphoreci.com/community/tutorials/testing-react-components-with-enzyme-and-mocha
-    - particularly interested in ava (avajs)
-  - [ ] investigate [snapshot testing in jest](http://facebook.github.io/jest/blog/2016/07/27/jest-14.html)
-  - [ ] [make react's proptype warnings throw errors while testing](https://gist.github.com/jsdf/6fc35890e4ed4a219072)
-  - [ ] investigate [producthunt/chai-enzyme](/producthunt/chai-enzyme) ?
-  - [writing redux tests](/reactjs/redux/blob/master/docs/recipes/WritingTests.md)
-- test the prod config. (is probably very broken; the files are split where there should be differences for the most part, though)
-- investigate style linting
-  - via postcss: https://github.com/stylelint/stylelint
-- consider other postcss plugins
-  - css variables https://github.com/MadLittleMods/postcss-css-variables
-  - map might be particularly handy https://github.com/pascalduez/postcss-map
-  - http://postcss.parts/
-- [ ] investigate setting up basic CLI generator (i.e. 'generate component MyComponent' -> outputs components in proper place)
-- replace isomorphic fetch with fetch-wg or whatever (this boilerplate isn't isomorphic)
-- consider switching to [redux-router](https://github.com/acdlite/redux-router) ([reasons](https://github.com/acdlite/redux-router#differences-with-react-router-redux))
-- Icon + text alignments are kinda screwy. (especially in `IconButton`)
-- IconButton taller than Button
-- Read/control order of Card.Wrapper children
-- Make a `<Text>` component which wraps its `children` in a div with style module `composes: body-text from 'styles/_typography.css';`
-- **Move TODOs to github issues?**
-
 # Credits / thanks
 - Dan Abramov for redux, hot loader, and more. Dan's countless example projects and community discussion have been invaluable to my learning.
 - My teammates at Spatially who have taught and shown me so much.
