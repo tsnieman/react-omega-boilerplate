@@ -25,6 +25,7 @@ dd {
 
 /* TODO explanation of why font-family isn't set at body (i.e. faster rendering) */
 .body-text {
+  line-height: $site-line-height;
   font-family: $site-font-family;
 
   h1 {
