@@ -6,6 +6,7 @@ import styles from './About.css';
 // Components
 import GithubUser from 'containers/GithubUser';
 import BodyText from 'components/BodyText';
+import Message from 'components/Message';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
 
@@ -14,10 +15,10 @@ const About = () => (
     <BodyText styleName="intro">
       <h1>About</h1>
       <p>Humans who have contributed to this repo.</p>
-      <small>
+      <Message variant="info">
         Note: loading intentionally delayed (less than 2 seconds)
         to show off the fancy loading effect.
-      </small>
+      </Message>
     </BodyText>
 
     <ul>

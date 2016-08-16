@@ -4,6 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './Home.css';
 
 // Components
+import Message from 'components/Message';
 import Button from 'components/Button';
 import StarButton from 'components/StarButton';
 import IconButton from 'components/IconButton';
@@ -17,6 +18,36 @@ const Home = () => (
     <header styleName="title">
       <h1>Home</h1>
     </header>
+
+    <Message>
+      <code>{'<Message />'}</code> (default props variant)
+      (WIP) long text lala la la la al al ala la l
+      la la la al la al al ala la la laa la l ala la la
+    </Message>
+
+    <Message variant="info">
+      <code>{'<Message variant="info" />'}</code>
+      (WIP) long text lala la la la al al ala la l
+      la la la al la al al ala la la laa la l ala la la
+    </Message>
+
+    <Message variant="positive">
+      <code>{'<Message variant="positive" />'}</code>
+      (WIP) long text lala la la la al al ala la l
+      la la la al la al al ala la la laa la l ala la la
+    </Message>
+
+    <Message variant="negative">
+      <code>{'<Message variant="negative" />'}</code>
+      (WIP) long text lala la la la al al ala la l
+      la la la al la al al ala la la laa la l ala la la
+    </Message>
+
+    <Message variant="inverse">
+      <code>{'<Message variant="inverse" />'}</code>
+      (WIP) long text lala la la la al al ala la l
+      la la la al la al al ala la la laa la l ala la la
+    </Message>
 
     <Card.Wrapper styleName="card">
       <Card.Title>
@@ -51,6 +82,12 @@ const Home = () => (
         <p>This is Card.Body text.</p>
         <p>Test 2nd paragraph.</p>
         <a href="#">Link test</a>
+
+        <Message variant="inverse">
+          <code>{'<Message variant="inverse" />'}</code>
+          (WIP) long text lala la la la al al ala la l
+          la la la al la al al ala la la laa la l ala la la
+        </Message>
       </Card.Body>
 
       <Card.Actions>
