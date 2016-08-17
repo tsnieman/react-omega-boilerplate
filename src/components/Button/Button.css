@@ -56,6 +56,7 @@ $button-border-radius: 2px;
   /* should buttons never be pointers? https://medium.com/simple-human/buttons-shouldnt-have-a-hand-cursor-b11e99ca374b#.mxi539ydo */
   cursor: default; 
 
+  border: 0.1em solid color($color-black alpha(15%));
   border-radius: $button-border-radius;
 
   box-shadow: $shadow-0;
@@ -113,6 +114,7 @@ $button-border-radius: 2px;
   composes: button-base;
   background: $button-inverse-background-color;
   color: $button-inverse-color;
+  border: 0.1em solid color($color-white alpha(15%));
 
   &:hover {
     background: $button-inverse-hover-background-color;
