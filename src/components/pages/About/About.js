@@ -15,10 +15,12 @@ const About = () => (
     <BodyText styleName="intro">
       <h1>About</h1>
       <p>Humans who have contributed to this repo.</p>
-      <Message variant="info">
-        Note: loading intentionally delayed (less than 2 seconds)
-        to show off the fancy loading effect.
-      </Message>
+      <Message.Wrapper variant="info">
+        <Message.Body>
+          Note: loading intentionally delayed (less than 2 seconds)
+          to show off the fancy loading effect.
+        </Message.Body>
+      </Message.Wrapper>
     </BodyText>
 
     <ul>

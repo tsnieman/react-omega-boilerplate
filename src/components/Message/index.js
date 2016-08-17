@@ -1,2 +1,9 @@
-import Message from './Message.js';
-export default Message;
+import Wrapper from './Wrapper';
+import Body from './Body';
+import Actions from './Actions';
+
+export default {
+  Wrapper,
+  Body,
+  Actions,
+};

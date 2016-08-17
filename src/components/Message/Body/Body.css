@@ -1,0 +1,21 @@
+@import 'styles/_variables';
+@import '../Message';
+
+.wrapper {
+  padding: 0 $content-padding;
+  flex-grow: 1;
+
+  + * {
+    padding: 0 $content-padding;
+    margin-left: $content-padding;
+    border-left: 1px solid $border-color;
+  }
+}
+
+.icon {
+  display: inline-block; /* required to transform:scale()...
+                            apparently transform/scale doesn't
+                            like display:inline */
+  transform: scale(1.2);
+  margin-right: 0.25em;
+}

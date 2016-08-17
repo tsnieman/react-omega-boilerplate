@@ -1,0 +1,6 @@
+@import 'styles/_variables';
+@import '../Message';
+
+.wrapper {
+  flex: 0;
+}

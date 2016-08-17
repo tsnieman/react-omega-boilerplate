@@ -19,35 +19,43 @@ const Home = () => (
       <h1>Home</h1>
     </header>
 
+    <Message.Wrapper>
+      <Message.Body>
+        default message
+        <br />
+        (WIP) long text lala la la la al al ala la l
+        la la la al la al al ala la la laa la l ala la la
+      </Message.Body>
+
+      <Message.Actions>
+        <Button>Test</Button>
+      </Message.Actions>
+    </Message.Wrapper>
+
+    {/*
     <Message>
-      <code>{'<Message />'}</code> (default props variant)
+      default message
+      <br />
       (WIP) long text lala la la la al al ala la l
       la la la al la al al ala la la laa la l ala la la
     </Message>
 
     <Message variant="info">
-      <code>{'<Message variant="info" />'}</code>
-      (WIP) long text lala la la la al al ala la l
-      la la la al la al al ala la la laa la l ala la la
+      'info' message
     </Message>
 
     <Message variant="positive">
-      <code>{'<Message variant="positive" />'}</code>
-      (WIP) long text lala la la la al al ala la l
-      la la la al la al al ala la la laa la l ala la la
+      'positive' message
     </Message>
 
     <Message variant="negative">
-      <code>{'<Message variant="negative" />'}</code>
-      (WIP) long text lala la la la al al ala la l
-      la la la al la al al ala la la laa la l ala la la
+      'negative' message
     </Message>
 
     <Message variant="inverse">
-      <code>{'<Message variant="inverse" />'}</code>
-      (WIP) long text lala la la la al al ala la l
-      la la la al la al al ala la la laa la l ala la la
+      'inverse' message
     </Message>
+    */}
 
     <Card.Wrapper styleName="card">
       <Card.Title>
@@ -83,11 +91,13 @@ const Home = () => (
         <p>Test 2nd paragraph.</p>
         <a href="#">Link test</a>
 
+        {/*
         <Message variant="inverse">
           <code>{'<Message variant="inverse" />'}</code>
           (WIP) long text lala la la la al al ala la l
           la la la al la al al ala la la laa la l ala la la
         </Message>
+        */}
       </Card.Body>
 
       <Card.Actions>

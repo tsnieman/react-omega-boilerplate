@@ -5,49 +5,8 @@ $border-color: color($color-black alpha(15%));
 $content-padding: 1em;
 $border-radius: 2px;
 
-$message-default-background-color: color($color-black alpha(0.1));
+$message-default-background-color: color($color-gray-70 alpha(0.1));
 $message-info-background-color: color(#55a1be lightness(+30%)); /* TODO variable color */
 $message-positive-background-color: color($color-positive lightness(+30%));
 $message-negative-background-color: color($color-negative lightness(+30%));
 $message-inverse-background-color: color($color-white alpha(0.1));
-
-.message-base {
-  padding: $content-padding;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-}
-
-.message-default {
-  composes: message-base;
-  background: $message-default-background-color;
-}
-
-.message-info {
-  composes: message-base;
-  background: $message-info-background-color;
-}
-
-.message-positive {
-  composes: message-base;
-  background: $message-positive-background-color;
-}
-
-.message-negative {
-  composes: message-base;
-  background: $message-negative-background-color;
-}
-
-.message-inverse {
-  composes: message-base;
-  background: $message-inverse-background-color;
-}
-
-.icon {
-  display: inline-block; /* required to transform:scale()...
-                            apparently transform/scale doesn't
-                            like display:inline */
-  transform: scale(1.2);
-  margin-right: 0.25em;
-}
