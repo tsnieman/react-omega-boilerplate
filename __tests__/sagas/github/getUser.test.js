@@ -21,8 +21,7 @@ describe('Github getUser Saga', () => {
   iterator = watchGetUser();
 
   // `takeEvery` first does a `TAKE` on the action you give it
-  // TODO but this one uses takeLatest
-  it('should take on the latest GET_USER action', () => {
+  it('should take every GET_USER action', () => {
     actualYield = iterator.next().value;
     expectedYield = take(GITHUB_ACTIONS.GET_USER);
     expect(actualYield).to.deep.equal(expectedYield);

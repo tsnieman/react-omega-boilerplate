@@ -4,7 +4,7 @@ import actions from 'actions';
 import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
 
 describe('Github action creators', () => {
-  it('should create an action to get a user', () => {
+  it('GITHUB_ACTIONS.GET_USER should create an action to get a user', () => {
     const username = 'tsnieman';
 
     const expectedAction = {
@@ -21,7 +21,7 @@ describe('Github action creators', () => {
     });
   });
 
-  it('should create an action to set a user', () => {
+  it('GITHUB_ACTIONS.SET_USER should create an action to set a user', () => {
     const user = {
       'id': 1234,
     };

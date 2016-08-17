@@ -39,4 +39,8 @@ describe('GithubUser container', function() {
 
     expect(wrapper.find('GithubUser')).to.have.length(1);
   });
+
+  // TODO check that the provided username is actually fetched
+  // (TDD would have been good here, as i only noticed that it
+  // was always fetching a single user after using the component a bit)
 });

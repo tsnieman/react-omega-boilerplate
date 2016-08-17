@@ -10,7 +10,7 @@ import GithubUser from 'components/GithubUser';
 class GithubUserContainer extends React.Component {
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
-    if (!this.props.user) this.props.getUser('tsnieman');
+    if (!this.props.user) this.props.getUser(this.props.username);
     // TODO onFailure/onSuccess set local state.loading = false
   }
 

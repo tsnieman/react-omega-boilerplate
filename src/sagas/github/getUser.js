@@ -1,5 +1,5 @@
 // Basics
-import { takeLatest } from 'redux-saga';
+import { takeEvery } from 'redux-saga';
 import { put, call, cancelled } from 'redux-saga/effects';
 import actions from 'actions';
 import services from 'services';
@@ -25,6 +25,7 @@ export function* getUser(action = {}) {
 
     yield put(actions.github.setUser(fetchedUser));
   } catch (err) {
+    // console.log({ err });
     // TODO error action for in-browser feedback.
     // yield put(ErrorAction())
     // console.log('yield put(ErrorAction())', err); // eslint-disable-line no-console
@@ -41,5 +42,5 @@ export function* getUser(action = {}) {
 }
 
 export default function* watchGetUser() {
-  yield* takeLatest(GITHUB_ACTIONS.GET_USER, getUser);
+  yield* takeEvery(GITHUB_ACTIONS.GET_USER, getUser);
 }
