@@ -26,6 +26,7 @@ const About = () => (
     <ul>
       <li styleName="human">
         <GithubUser username="tsnieman" />
+        <GithubUser username="definitelyafakeuserwithaloginthatistoolong" />
       </li>
     </ul>
   </div>
