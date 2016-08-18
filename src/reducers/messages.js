@@ -6,7 +6,7 @@ import {
 const INITIAL_STATE = {};
 
 const reducers = {
-  [MESSAGES_ACTIONS.ADD_MESSAGE]: (state, action) => ({
+  [MESSAGES_ACTIONS.CREATE_MESSAGE]: (state, action) => ({
     ...state,
     [action.id]: {
       id: action.id,

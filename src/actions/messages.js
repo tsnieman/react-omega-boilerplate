@@ -3,9 +3,9 @@ import { ACTIONS as MESSAGES_ACTIONS } from 'constants/messages';
 // Helpers
 import shortid from 'shortid';
 
-export function addMessage(body, options = {}) {
+export function createMessage(body, options = {}) {
   return {
-    type: MESSAGES_ACTIONS.ADD_MESSAGE,
+    type: MESSAGES_ACTIONS.CREATE_MESSAGE,
     id: shortid.generate(),
     body,
     options,

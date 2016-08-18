@@ -12,12 +12,12 @@ describe('Messages reducers', () => {
     expect(state).to.deep.equal({});
   });
 
-  it('should handle ADD_MESSAGE', () => {
+  it('should handle CREATE_MESSAGE', () => {
     const initialState = {};
     const body = 'test body';
 
     const state = messagesReducer(initialState, {
-      type: MESSAGES_ACTIONS.ADD_MESSAGE,
+      type: MESSAGES_ACTIONS.CREATE_MESSAGE,
       body,
     });
 
