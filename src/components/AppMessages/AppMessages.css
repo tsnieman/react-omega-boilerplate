@@ -1,12 +1,14 @@
+@import 'styles/_variables';
+
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(100%);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -14,8 +16,9 @@
 }
 
 .message {
-  animation: fade-in 0.5s;
+  animation: fade-in 0.15s;
   animation-iteration-count: 1;
+  background: $color-white;
 
   + .message {
     margin-top: 1rem;

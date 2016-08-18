@@ -13,7 +13,7 @@ import Checkbox from 'components/Checkbox';
 // import { Link } from 'react-router';
 // import Message from 'components/Message';
 
-const Home = () => (
+const Home = (props) => (
   <div styleName="page">
     <header styleName="title">
       <h1>Home</h1>
@@ -92,11 +92,23 @@ const Home = () => (
         <StarButton styleName="right-button" />
       </Card.Actions>
     </Card.Wrapper>
+
+    <Card.Wrapper styleName="card">
+      <Card.Title>
+        Site messages (alerts/notifications/etc)
+      </Card.Title>
+
+      <Card.Body>
+        <Button
+          onClick={() => props.createError('This is a site message!')}
+        >Create a site message</Button>
+      </Card.Body>
+    </Card.Wrapper>
   </div>
 );
 
 Home.propTypes = {
-  TODO: PropTypes.any,
+  createError: PropTypes.func.isRequired, // Just to show off the error message functionality.
 };
 
 export default cssModules(Home, styles);

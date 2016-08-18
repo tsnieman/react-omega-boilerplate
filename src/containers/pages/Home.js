@@ -1,13 +1,10 @@
 // Basics
-import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import actions from 'actions';
+import actions from 'actions';
 
 // Components
 import HomePage from 'components/pages/Home';
-
-const HomePageContainer = () => <HomePage />;
 
 function mapStateToProps() { // (state, ownProps)
   return {
@@ -16,8 +13,10 @@ function mapStateToProps() { // (state, ownProps)
 
 function mapDispatchToProps(dispatch) { // (dispatch, ownProps)
   return bindActionCreators({
-    // getMaps: actions.map.getMaps,
+    createError: (err) => actions.messages.createMessage(
+      new Error(`Test message + ${err}`, 'thing'),
+    ),
   }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePageContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
