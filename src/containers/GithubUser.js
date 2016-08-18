@@ -21,7 +21,6 @@ class GithubUserContainer extends React.Component {
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
     if (!this.props.user) {
-      // this.setState({ loading: true });
       this.props.getUser(this.props.username, {
         // TODO onFailure/onSuccess set local state.loading = false
         onSuccess: (createdUser) => {
