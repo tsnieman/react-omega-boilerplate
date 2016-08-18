@@ -8,6 +8,13 @@
 }
 
 .human {
+  display: inline-block;
+  vertical-align: top;
   max-width: 15rem;
+  margin-bottom: 1rem;
   text-align: center;
+
+  + .human {
+    margin-left: 1rem;
+  }
 }

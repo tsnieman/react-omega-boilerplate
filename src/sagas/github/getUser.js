@@ -10,9 +10,9 @@ import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
 
 export function* getUser(action = {}) {
   try {
-    if (!action.username) throw new Error('No username provided');
-
     const { username, options } = action;
+
+    if (!username) throw new Error('No username provided');
 
     // For illustrative effect of the "Loading" state of components/GithubUser
     yield call(delay, 1500);
@@ -21,21 +21,26 @@ export function* getUser(action = {}) {
 
     // TODO verify successful fetch?
 
-    if (options.onSuccess) options.onSuccess(fetchedUser);
-
     yield put(actions.github.setUser(fetchedUser));
-  } catch (err) {
-    // console.log({ err });
-    // TODO error action for in-browser feedback.
-    // yield put(ErrorAction())
-    // console.log('yield put(ErrorAction())', err); // eslint-disable-line no-console
 
+    // success callback
+    if (options.onSuccess) options.onSuccess(fetchedUser);
+  } catch (err) {
     // TODO is test-only error-yielding a good choice?
     if (process.env.NODE_ENV === 'test') yield err;
+
+    const { options } = action;
+
+    // adds the error to the app messages
+    if (options.errorMessage) yield put(actions.messages.addMessage(err));
+
+    // failure callback
+    if (options.onFailure) options.onFailure(err);
   } finally {
+    // console.log('this runs after try (including/regardless of if the error was caught)');
+
     if (yield cancelled()) {
-      // TODO?
-      // yield put(CancelledAction())
+      // Action was cancelled.
       console.log('cancelled getUser'); // eslint-disable-line no-console
     }
   }

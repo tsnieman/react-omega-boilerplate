@@ -5,7 +5,6 @@
 
 .header {
   composes: body-text from 'styles/_typography.css';
-  margin-bottom: 1rem;
   padding: 1em;
   background: $color-white;
   border-bottom: 1px solid $color-gray-80;
@@ -15,4 +14,11 @@
       margin-left: 1em;
     }
   }
+}
+
+.messages {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
 }

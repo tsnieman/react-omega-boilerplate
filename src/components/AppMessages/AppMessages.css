@@ -1,0 +1,23 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wrapper {
+}
+
+.message {
+  animation: fade-in 0.5s;
+  animation-iteration-count: 1;
+
+  + .message {
+    margin-top: 1rem;
+  }
+}

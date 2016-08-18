@@ -21,6 +21,7 @@
     "react-redux": "^4.4.5",
     "recompose": "^0.20.2",
     "redux": "^3.5.2",
+    "shortid": "^2.2.6",
     "webfontloader": "^1.6.26"
   },
   "devDependencies": {

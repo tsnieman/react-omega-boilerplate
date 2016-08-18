@@ -49,11 +49,15 @@ const GithubUser = ({ user, loading }) => {
     );
   }
 
+  // Not loading and user still not present?
+  // Something went wrong.
   if (!user) {
     return (
-      <div>
-        Github user not found.
-      </div>
+      <Card.Wrapper styleName="wrapper">
+        <Card.Body>
+          Github user could not be loaded.
+        </Card.Body>
+      </Card.Wrapper>
     );
   }
 
