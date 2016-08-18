@@ -25,16 +25,16 @@ class GithubUserContainer extends React.Component {
       this.props.getUser(this.props.username, {
         // TODO onFailure/onSuccess set local state.loading = false
         onSuccess: (createdUser) => {
+          console.log('onSuccess!', createdUser); // eslint-disable-line no-console
           this.setState({ isFetching: false });
-          console.log('onSuccess!', createdUser);
         },
 
         onFailure: (error) => {
+          console.log('onFailure!', error); // eslint-disable-line no-console
           this.setState({
             isFetching: false,
             error,
           });
-          console.log('onFailure!', error);
         },
       });
     }
