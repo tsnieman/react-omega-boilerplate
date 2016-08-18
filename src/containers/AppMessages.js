@@ -8,7 +8,7 @@ import AppMessages from 'components/AppMessages';
 
 function mapStateToProps(state) { // (state, ownProps)
   return {
-    messages: Object.keys(state.app.messages).map((messageId) => state.messages[messageId]),
+    messages: Object.keys(state.app.messages).map((messageId) => state.app.messages[messageId]),
   };
 }
 
