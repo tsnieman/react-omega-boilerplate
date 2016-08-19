@@ -4,6 +4,7 @@ import cssModules from 'react-css-modules';
 import styles from './AppHeader.css';
 
 // Components
+import AppMessages from 'containers/AppMessages';
 import Icon from 'components/Icon';
 import { Link } from 'react-router';
 
@@ -21,6 +22,8 @@ const AppHeader = ({ children }) => (
         </Link>
       </nav>
     </header>
+
+    <AppMessages styleName="messages" />
 
     {children}
   </div>

@@ -15,10 +15,19 @@ const About = () => (
     <BodyText styleName="intro">
       <h1>About</h1>
       <p>Humans who have contributed to this repo.</p>
-      <Message.Wrapper variant="info">
+
+      <Message.Wrapper variant="info" styleName="message">
         <Message.Body>
           Note: loading intentionally delayed (less than 2 seconds)
           to show off the fancy loading effect.
+        </Message.Body>
+      </Message.Wrapper>
+
+      <Message.Wrapper variant="info" styleName="message">
+        <Message.Body>
+          Note: also one of the 'humans' in the list is a fake
+          github username to show a failure-handling state. This
+          is mostly to see how smooth I can make failure.
         </Message.Body>
       </Message.Wrapper>
     </BodyText>
@@ -26,6 +35,10 @@ const About = () => (
     <ul>
       <li styleName="human">
         <GithubUser username="tsnieman" />
+      </li>
+
+      <li styleName="human">
+        <GithubUser username="definitelyafakeuserwithaloginthatistoolong" />
       </li>
     </ul>
   </div>

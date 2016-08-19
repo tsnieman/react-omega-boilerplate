@@ -7,20 +7,48 @@ import actions from 'actions';
 // Components
 import GithubUser from 'components/GithubUser';
 
+// TODO use recompose? lifecycle() + withState()?
 class GithubUserContainer extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isFetching: true,
+      error: null,
+    };
+  }
+
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
-    if (!this.props.user) this.props.getUser(this.props.username);
-    // TODO onFailure/onSuccess set local state.loading = false
+    if (!this.props.user) {
+      this.props.getUser(this.props.username, {
+        // TODO onFailure/onSuccess set local state.loading = false
+        onSuccess: (createdUser) => {
+          console.log('onSuccess!', createdUser); // eslint-disable-line no-console
+          this.setState({ isFetching: false });
+        },
+
+        onFailure: (error) => {
+          console.log('onFailure!', error); // eslint-disable-line no-console
+          this.setState({
+            isFetching: false,
+            error,
+          });
+        },
+      });
+    }
   }
 
   render() {
     const { user } = this.props;
 
     if (!user) {
+      const hasError = !!this.state.error;
+      const isLoading = (!user || this.state.isFetching) && !hasError;
+
       return (
         <GithubUser
-          loading
+          loading={isLoading}
         />
       );
     }

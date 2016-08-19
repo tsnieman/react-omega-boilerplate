@@ -4,7 +4,6 @@ import cssModules from 'react-css-modules';
 import styles from './Home.css';
 
 // Components
-import Message from 'components/Message';
 import Button from 'components/Button';
 import StarButton from 'components/StarButton';
 import IconButton from 'components/IconButton';
@@ -12,50 +11,13 @@ import Card from 'components/Card';
 import Checkbox from 'components/Checkbox';
 // import Icon from 'components/Icon';
 // import { Link } from 'react-router';
+// import Message from 'components/Message';
 
-const Home = () => (
+const Home = (props) => (
   <div styleName="page">
     <header styleName="title">
       <h1>Home</h1>
     </header>
-
-    <Message.Wrapper>
-      <Message.Body>
-        default message
-        <br />
-        (WIP) long text lala la la la al al ala la l
-        la la la al la al al ala la la laa la l ala la la
-      </Message.Body>
-
-      <Message.Actions>
-        <Button>Test</Button>
-      </Message.Actions>
-    </Message.Wrapper>
-
-    {/*
-    <Message>
-      default message
-      <br />
-      (WIP) long text lala la la la al al ala la l
-      la la la al la al al ala la la laa la l ala la la
-    </Message>
-
-    <Message variant="info">
-      'info' message
-    </Message>
-
-    <Message variant="positive">
-      'positive' message
-    </Message>
-
-    <Message variant="negative">
-      'negative' message
-    </Message>
-
-    <Message variant="inverse">
-      'inverse' message
-    </Message>
-    */}
 
     <Card.Wrapper styleName="card">
       <Card.Title>
@@ -90,14 +52,6 @@ const Home = () => (
         <p>This is Card.Body text.</p>
         <p>Test 2nd paragraph.</p>
         <a href="#">Link test</a>
-
-        {/*
-        <Message variant="inverse">
-          <code>{'<Message variant="inverse" />'}</code>
-          (WIP) long text lala la la la al al ala la l
-          la la la al la al al ala la la laa la l ala la la
-        </Message>
-        */}
       </Card.Body>
 
       <Card.Actions>
@@ -138,11 +92,32 @@ const Home = () => (
         <StarButton styleName="right-button" />
       </Card.Actions>
     </Card.Wrapper>
+
+    <Card.Wrapper styleName="card">
+      <Card.Title>
+        Site messages (alerts/notifications/etc)
+      </Card.Title>
+
+      <Card.Body>
+        <Button
+          styleName="create-message-example"
+          onClick={() => props.createMessage('This is an app message!')}
+        >Create an app message</Button>
+
+        <Button
+          styleName="create-message-example"
+          onClick={() => props.createErrorMessage('This is an app error message!')}
+          variant="negative"
+        >Create an app error message</Button>
+      </Card.Body>
+    </Card.Wrapper>
   </div>
 );
 
 Home.propTypes = {
-  TODO: PropTypes.any,
+  // For showing off the app message/error functionality.
+  createMessage: PropTypes.func.isRequired,
+  createErrorMessage: PropTypes.func.isRequired,
 };
 
 export default cssModules(Home, styles);

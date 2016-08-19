@@ -1,6 +1,9 @@
 @import 'styles/_variables';
 
 .page {
+  /* little breathing room so Messages don't cover the message buttons
+   * ... though I guess that's kind of a TODO of its own? :P */
+  padding-bottom: 10rem;
 }
 
 .title {
@@ -29,4 +32,10 @@
 
 .right-button {
   float: right;
+}
+
+.create-message-example {
+  + .create-message-example {
+    margin-left: 1rem;
+  }
 }

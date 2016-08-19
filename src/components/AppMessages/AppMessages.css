@@ -1,0 +1,52 @@
+@import 'styles/_variables';
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+}
+
+.wrapper {
+  /*background: linear-gradient(#000, transparent);*/
+}
+
+.message {
+  box-shadow: $shadow-1;
+
+  + .message {
+    margin-top: 1rem;
+  }
+
+  &[data-variant="default"] {
+    background: $color-gray-90;
+  }
+
+  &:global(.app-message-enter) {
+    animation: enter 0.15s;
+    animation-iteration-count: 1;
+  }
+
+  &:global(.app-message-leave) {
+    animation: enter 0.15s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+  }
+}

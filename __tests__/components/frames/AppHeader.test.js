@@ -17,6 +17,6 @@ describe('AppHeader frame component', function() {
       </AppHeader>
     );
 
-    expect(wrapper.html()).to.contain('testing')
+    expect(wrapper.text().indexOf('testing')).to.be.above(0)
   });
 });

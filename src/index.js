@@ -14,7 +14,12 @@ const store = configureStore();
 // Routing
 import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-const history = syncHistoryWithStore(browserHistory, store);
+const history = syncHistoryWithStore(browserHistory, store, {
+  // Because react-router-redux expects top-level 'routing'
+  // (i.e. state.routing) in the redux store. This app is
+  // configured with that nested in state.app.routing.
+  selectLocationState: (state) => state.app.routing,
+});
 
 const rootEl = document.getElementById('root');
 
