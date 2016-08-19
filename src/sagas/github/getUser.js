@@ -32,7 +32,7 @@ export function* getUser(action = {}) {
     const { options } = action;
 
     // adds the error to the app messages
-    if (options.errorMessage) yield put(actions.messages.createMessage(err));
+    if (options.errorMessage) yield put(actions.messages.createErrorMessage(err));
 
     // failure callback
     if (options.onFailure) options.onFailure(err);

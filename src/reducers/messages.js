@@ -11,6 +11,7 @@ const reducers = {
     [action.id]: {
       id: action.id,
       body: action.body,
+      variant: action.variant,
     },
   }),
 

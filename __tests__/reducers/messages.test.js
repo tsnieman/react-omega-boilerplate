@@ -27,6 +27,24 @@ describe('Messages reducers', () => {
     expect(state[addedMessageId].hasOwnProperty('id')).to.equal(true);
   });
 
+  it('should handle CREATE_MESSAGE with specified variant', () => {
+    const initialState = {};
+    const body = 'test body';
+    const variant = 'positive';
+
+    const state = messagesReducer(initialState, {
+      type: MESSAGES_ACTIONS.CREATE_MESSAGE,
+      body,
+      variant,
+    });
+
+    expect(Object.keys(state).length).to.equal(1);
+    const addedMessageId = Object.keys(state)[0]; // because id is generated
+    expect(state[addedMessageId].body).to.equal(body);
+    expect(state[addedMessageId].variant).to.equal(variant);
+    expect(state[addedMessageId].hasOwnProperty('id')).to.equal(true);
+  });
+
   it('should handle REMOVE_MESSAGE', () => {
     const FAKE_MESSAGES = {
       abc123: {
@@ -49,4 +67,6 @@ describe('Messages reducers', () => {
     expect(state['abc123']).to.not.exist;
     expect(state['xyz789'].body).to.equal(FAKE_MESSAGES['xyz789'].body);
   });
+
+  // TODO more CREATE_MESSAGE and REMOVE_MESSAGE tests... better TDD in general :/
 })

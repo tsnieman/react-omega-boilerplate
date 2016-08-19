@@ -13,9 +13,8 @@ function mapStateToProps() { // (state, ownProps)
 
 function mapDispatchToProps(dispatch) { // (dispatch, ownProps)
   return bindActionCreators({
-    createError: (err) => actions.messages.createMessage(
-      new Error(`Test message + ${err}`, 'thing'),
-    ),
+    createMessage: (text) => actions.messages.createMessage({ body: text }),
+    createErrorMessage: (errText) => actions.messages.createErrorMessage(new Error(errText)),
   }, dispatch);
 }
 

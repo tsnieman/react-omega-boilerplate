@@ -7,6 +7,9 @@ import styles from './AppMessages.css';
 import Message from 'components/Message';
 import Button from 'components/Button';
 
+// Helpers
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 const AppMessages = (props) => {
   const {
     // children,
@@ -15,8 +18,8 @@ const AppMessages = (props) => {
     removeMessage,
   } = props;
 
-  const hasMessages = (messages && messages.length > 0);
-  if (!hasMessages) return null;
+  // const hasMessages = (messages && messages.length > 0);
+  // if (!hasMessages) return null;
 
   const cleanProps = { ...props };
   delete cleanProps.styles; // avoid react-css-modules related errors
@@ -29,20 +32,30 @@ const AppMessages = (props) => {
       className={`${className} app-messages-wrapper`}
       styleName="wrapper"
     >
-      {messages.map((message) => (
-        <Message.Wrapper key={message.id} styleName="message">
-          <Message.Body>
-            {/* TODO 'message' obj is error-specific rn */}
-            {message.body.message}
-          </Message.Body>
+      <ReactCSSTransitionGroup
+        transitionName="app-message"
+        transitionEnterTimeout={150}
+        transitionLeaveTimeout={130}
+      >
+        {messages.map((message) => (
+          <Message.Wrapper
+            key={message.id}
+            styleName="message"
+            variant={message.variant}
+            data-variant={message.variant || 'default'}
+          >
+            <Message.Body>
+              {message.body}
+            </Message.Body>
 
-          <Message.Actions>
-            <Button
-              onClick={() => removeMessage(message.id)}
-            >Dismiss</Button>
-          </Message.Actions>
-        </Message.Wrapper>
-      ))}
+            <Message.Actions>
+              <Button
+                onClick={() => removeMessage(message.id)}
+              >Dismiss</Button>
+            </Message.Actions>
+          </Message.Wrapper>
+        ))}
+      </ReactCSSTransitionGroup>
     </div>
   );
 };
@@ -56,6 +69,7 @@ AppMessages.propTypes = {
 
 AppMessages.defaultProps = {
   className: '',
+  messages: [],
 };
 
 export default cssModules(AppMessages, styles);

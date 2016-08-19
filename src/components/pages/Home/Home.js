@@ -100,15 +100,24 @@ const Home = (props) => (
 
       <Card.Body>
         <Button
-          onClick={() => props.createError('This is a site message!')}
-        >Create a site message</Button>
+          styleName="create-message-example"
+          onClick={() => props.createMessage('This is an app message!')}
+        >Create an app message</Button>
+
+        <Button
+          styleName="create-message-example"
+          onClick={() => props.createErrorMessage('This is an app error message!')}
+          variant="negative"
+        >Create an app error message</Button>
       </Card.Body>
     </Card.Wrapper>
   </div>
 );
 
 Home.propTypes = {
-  createError: PropTypes.func.isRequired, // Just to show off the error message functionality.
+  // For showing off the app message/error functionality.
+  createMessage: PropTypes.func.isRequired,
+  createErrorMessage: PropTypes.func.isRequired,
 };
 
 export default cssModules(Home, styles);
