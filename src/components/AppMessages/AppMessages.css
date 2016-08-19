@@ -38,15 +38,21 @@
   &[data-variant="default"] {
     background: $color-gray-90;
   }
+}
 
-  &:global(.app-message-enter) {
-    animation: enter 0.15s;
-    animation-iteration-count: 1;
-  }
+.enter {
+  animation: enter 0.15s;
+  animation-iteration-count: 1;
+}
 
-  &:global(.app-message-leave) {
-    animation: enter 0.15s;
-    animation-iteration-count: 1;
-    animation-direction: reverse;
-  }
+.enter-active {
+}
+
+.leave {
+  animation: enter 0.15s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+}
+
+.leave-active {
 }

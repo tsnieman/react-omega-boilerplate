@@ -33,7 +33,12 @@ const AppMessages = (props) => {
       styleName="wrapper"
     >
       <ReactCSSTransitionGroup
-        transitionName="app-message"
+        transitionName={{
+          enter: styles.enter,
+          enterActive: styles.enterActive,
+          leave: styles.leave,
+          leaveActive: styles.leaveActive,
+        }}
         transitionEnterTimeout={150}
         transitionLeaveTimeout={130}
       >
