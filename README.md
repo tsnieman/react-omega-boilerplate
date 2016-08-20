@@ -4,6 +4,11 @@ WIP Documentation can be found [in the `docs` directory](/docs). They're probabl
 - Use a newer version of nodejs; I use `v6.3.1` (TODO be more specific about minimum requirement)
 - Install [jest](https://github.com/facebook/jest) (used for unit testing) globally
 
+# Starting the application
+- `npm start` will run the application.
+- `npm test:watch` will run jest through all the tests once.
+- `npm test:watch` will run jest in 'watch' mode, watching for changed files (based on git diff) and only running tests for those changed files (or files that import/use changed files).
+
 # Oddities
 **Note about warning which says "[react-router] You cannot change ; it will be ignored",**
 -- this warning is harmless, we just can't disable it.
