@@ -18,6 +18,10 @@ class GithubUserContainer extends React.Component {
     };
   }
 
+  // TODO if the component unmounts before the
+  // getUser action finishes (i.e. a situation like
+  // going to a different page), you'll get a warning
+  // in the browser console. how to avoid? does it matter enough?
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
     if (!this.props.user) {
