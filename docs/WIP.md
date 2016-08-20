@@ -3,7 +3,7 @@
 **Super WIP here.** This is mostly to outline / collect thoughts. Will (hopefully) update this in the near future.
 
 ## Setup and use
-Stuff you'll want to install and/or know while setting up and using this boilerplate.
+Stuff you'll want to install and/or know while setting up and using this boilerplate. See [README](/README.md) for now.
 
 ## Pieces
 A list of the dependencies, what those technologies do, etc.
