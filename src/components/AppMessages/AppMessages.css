@@ -26,9 +26,11 @@
 
 .wrapper {
   /*background: linear-gradient(#000, transparent);*/
+  pointer-events: none;
 }
 
 .message {
+  pointer-events: auto;
   box-shadow: $shadow-1;
 
   + .message {

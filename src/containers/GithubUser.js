@@ -35,6 +35,9 @@ class GithubUserContainer extends React.Component {
             error,
           });
         },
+
+        // Log action errors as app messages.
+        // errorMessage: true,
       });
     }
   }
