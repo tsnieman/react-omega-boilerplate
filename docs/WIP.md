@@ -54,3 +54,6 @@ A look into the inner workings of common app "framework", such as app error syst
   - App errors: An action-and-saga-driven error tracking/handling system which can be used to track or handle errors.
     - Error tracking (for analytics, dev notifications, etc) can all be handled in a single place.
     - Integrated with the app messages system.
+
+# Oddities
+See [README](/README.md) for now.
