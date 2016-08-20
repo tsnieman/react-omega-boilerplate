@@ -7,7 +7,8 @@
     "build:dev": "npm run clean",
     "build:prod": "npm run clean && webpack --config webpack.config.js -p",
     "start": "npm run build:dev && NODE_ENV=development node ./devServer.js",
-    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --no-cache --watch"
+    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest --no-cache",
+    "test:watch": "npm run test -- --watch"
   },
   "homepage": "https://github.com/tsnieman/react-omega-boilerplate",
   "dependencies": {
