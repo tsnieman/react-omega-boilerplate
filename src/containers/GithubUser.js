@@ -22,6 +22,7 @@ class GithubUserContainer extends React.Component {
   // getUser action finishes (i.e. a situation like
   // going to a different page), you'll get a warning
   // in the browser console. how to avoid? does it matter enough?
+  // relevant: https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html
   componentDidMount() {
     // Get user if not provided (i.e. not in store).
     if (!this.props.user) {
