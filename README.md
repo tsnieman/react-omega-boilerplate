@@ -1,20 +1,4 @@
-# Pieces
-- babel
-- webpack
-- react
-- redux
-- redux-saga
-- css modules (via css-loader)
-- post css
-  - autoprefixer
-  - various other plugins
-- redbox
-- webfontloader
-- isomorphic-fetch
-- eslint
-- redux-devtools
-  - redux-devtools-dock-monitor
-  - redux-devtools-log-monitor
+WIP Documentation can be found [in the `docs` directory](/docs). They're probably not much to look at right now.
 
 # Install requirements
 - Use a newer version of nodejs; I use `v6.3.1` (TODO be more specific about minimum requirement)
