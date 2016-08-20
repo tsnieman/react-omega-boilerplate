@@ -22,7 +22,6 @@ A list of the dependencies, what those technologies do, etc.
     - various other plugins
   - redbox
   - webfontloader (EDIT: not used; remove from package? keep in docs as recommendation?)
-  - isomorphic-fetch
   - eslint
   - chai
   - enzyme

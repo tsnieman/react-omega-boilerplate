@@ -13,7 +13,6 @@
   "homepage": "https://github.com/tsnieman/react-omega-boilerplate",
   "dependencies": {
     "babel-runtime": "^6.11.6",
-    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.14.1",
     "pluralize": "^3.0.0",
     "react": "^15.3.0",
