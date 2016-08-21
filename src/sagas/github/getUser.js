@@ -15,7 +15,7 @@ export function* getUser(action = {}) {
     if (!username) throw new Error('No username provided');
 
     // For illustrative effect of the "Loading" state of components/GithubUser
-    yield call(delay, 1500);
+    yield call(delay, 1000);
 
     const fetchedUser = yield call(services.github.fetchUser, username);
 
