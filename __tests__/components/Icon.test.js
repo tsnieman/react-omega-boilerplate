@@ -1,12 +1,20 @@
 import React from 'react';
-import { expect } from 'chai';
-import { shallow, mount, render } from 'enzyme';
+import renderer from 'react-test-renderer';
 
 import Icon from 'components/Icon';
 
-describe('Icon component', function() {
-  it('Should exist', () => {
-    let wrapper = shallow(<Icon />);
-    expect(wrapper).to.exist;
-  });
+test('Icon should render given icon', () => {
+  const tree = renderer.create(
+    <Icon icon="close" />
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+test('Icon render given icon and text', () => {
+  const tree = renderer.create(
+    <Icon icon="close">Close</Icon>
+  ).toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

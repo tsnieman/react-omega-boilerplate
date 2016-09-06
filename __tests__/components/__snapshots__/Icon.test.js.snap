@@ -1,0 +1,23 @@
+exports[`test Icon render given icon and text 1`] = `
+<span
+  className="_345FeF9k_di5n1QP-ZzMGn">
+  <svg
+    className="icon YFXFcQzua5M37L8oOV61d"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24" />
+  <span
+    className="label Qql4ncolFA17jR_YyCWzz">
+    Close
+  </span>
+</span>
+`;
+
+exports[`test Icon should render given icon 1`] = `
+<span
+  className="_345FeF9k_di5n1QP-ZzMGn">
+  <svg
+    className="icon YFXFcQzua5M37L8oOV61d"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 24 24" />
+</span>
+`;
