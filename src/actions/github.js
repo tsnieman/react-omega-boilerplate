@@ -7,10 +7,3 @@ export function getUser(username, options = {}) {
     options,
   };
 }
-
-export function setUser(user) {
-  return {
-    type: GITHUB_ACTIONS.SET_USER,
-    user,
-  };
-}

@@ -20,22 +20,4 @@ describe('Github action creators', () => {
       options: {},
     });
   });
-
-  it('GITHUB_ACTIONS.SET_USER should create an action to set a user', () => {
-    const user = {
-      'id': 1234,
-    };
-
-    const expectedAction = {
-      type: GITHUB_ACTIONS.SET_USER,
-      user,
-    };
-
-    const action = actions.github.setUser(user)
-
-    expect(action).to.deep.equal({
-      type: 'SET_USER',
-      user,
-    });
-  });
 })

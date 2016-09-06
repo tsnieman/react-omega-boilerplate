@@ -13,7 +13,9 @@
   "homepage": "https://github.com/tsnieman/react-omega-boilerplate",
   "dependencies": {
     "babel-runtime": "^6.11.6",
+    "humps": "^1.1.0",
     "lodash": "^4.14.1",
+    "normalizr": "^2.2.1",
     "pluralize": "^3.0.0",
     "react": "^15.3.1",
     "react-addons-css-transition-group": "^15.3.1",

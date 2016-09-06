@@ -7,21 +7,29 @@ import delay from 'helpers/delay';
 
 // Constants
 import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
+// import { ACTIONS as ENTITIES_ACTIONS } from 'constants/entities';
+import { SCHEMAS } from 'constants/entities';
+
+import { fetchEntity } from 'sagas/entities/fetchEntity';
 
 export function* getUser(action = {}) {
   try {
-    const { username, options } = action;
+    const {
+      username,
+      options,
+    } = action;
 
     if (!username) throw new Error('No username provided');
 
     // For illustrative effect of the "Loading" state of components/GithubUser
     yield call(delay, 1000);
 
-    const fetchedUser = yield call(services.github.fetchUser, username);
+    const fetchedUser = yield* fetchEntity({
+      service: () => services.github.fetchUser(username),
+      schema: SCHEMAS.USER,
+    });
 
-    // TODO verify successful fetch?
-
-    yield put(actions.github.setUser(fetchedUser));
+    console.log({ fetchedUser });
 
     // success callback
     if (options.onSuccess) options.onSuccess(fetchedUser);

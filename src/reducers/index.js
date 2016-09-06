@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import github from './github';
+import entities from './entities';
 import messages from './messages';
 import { routerReducer as routing } from 'react-router-redux';
 
@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
     routing,
     messages,
   }),
-  github,
+  entities,
 });
 
 export default rootReducer;

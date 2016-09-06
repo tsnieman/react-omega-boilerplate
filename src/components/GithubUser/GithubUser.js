@@ -66,7 +66,7 @@ const GithubUser = ({ user, loading }) => {
     <Card.Wrapper styleName="wrapper">
       <Card.Media>
         <img
-          src={user.avatar_url}
+          src={user.avatarUrl}
           alt={`github user @${user.login}'s avatar`}
         />
       </Card.Media>

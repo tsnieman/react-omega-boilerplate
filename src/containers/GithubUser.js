@@ -29,12 +29,12 @@ class GithubUserContainer extends React.Component {
       this.props.getUser(this.props.username, {
         // TODO onFailure/onSuccess set local state.loading = false
         onSuccess: (createdUser) => {
-          console.log('onSuccess!', createdUser); // eslint-disable-line no-console
+          console.log('onSuccess!', { createdUser }); // eslint-disable-line no-console
           this.setState({ isFetching: false });
         },
 
         onFailure: (error) => {
-          console.log('onFailure!', error); // eslint-disable-line no-console
+          console.log('onFailure!', { error }); // eslint-disable-line no-console
           this.setState({
             isFetching: false,
             error,
@@ -77,7 +77,7 @@ GithubUserContainer.propTypes = {
 
 function mapStateToProps(state, ownProps) { // (state, ownProps)
   return {
-    user: ownProps.user || state.github.users[ownProps.username],
+    user: ownProps.user || state.entities.users[ownProps.username],
   };
 }
 
