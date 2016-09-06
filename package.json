@@ -86,14 +86,6 @@
       "node_modules",
       "src"
     ],
-    "unmockedModulePathPatterns": [
-      "react",
-      "react-dom",
-      "react-addons-test-utils",
-      "fbjs",
-      "enzyme",
-      "lodash"
-    ],
     "modulePaths": [
       "/src"
     ]
