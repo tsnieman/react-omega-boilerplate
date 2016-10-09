@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 // Basics
 import React, { PropTypes } from 'react';
 import cssModules from 'react-css-modules';
@@ -7,11 +9,11 @@ import styles from './Checkbox.css';
 import Icon from 'components/Icon';
 
 class Checkbox extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
-      checked: false,
+      checked: !!props.checked,
     };
 
     // so value can be got via ref
@@ -41,9 +43,14 @@ class Checkbox extends React.Component {
 
     const icon = checked ? 'check-box' : 'check-box-outline-blank';
 
+    // TODO TYLER MAKE SURE YOU DIDNT BREAK THIS IN LINTING (div -> input)
+    // SINCE LINTING STOPS COMPILATION....
+    // TODO MAYBE SEPARATE LINTING FROM COMPLIATION.
+    // PLAIN ESLINT WHEN APP IS RUNNING? NEW NPM CMD? IDK WELL SEE! STAY TUNED FOLKS.
     return (
       <div
         {...cleanProps}
+        type="button"
         styleName="wrapper"
         onClick={this.toggleCheck}
         data-checked={checked}
@@ -64,3 +71,5 @@ Checkbox.defaultProps = {
 };
 
 export default cssModules(Checkbox, styles);
+
+/* eslint-enable jsx-a11y/no-static-element-interactions */

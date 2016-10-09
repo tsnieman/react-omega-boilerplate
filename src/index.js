@@ -1,3 +1,5 @@
+/* global document */
+
 // Basics
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,11 +11,13 @@ import Redbox from 'redbox-react';
 
 // Store configuration
 import configureStore from 'store/configureStore';
-const store = configureStore();
 
 // Routing
 import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
+
+const store = configureStore();
+
 const history = syncHistoryWithStore(browserHistory, store, {
   // Because react-router-redux expects top-level 'routing'
   // (i.e. state.routing) in the redux store. This app is

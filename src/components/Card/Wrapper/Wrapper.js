@@ -24,7 +24,7 @@ const Wrapper = (props) => {
   delete cleanProps.styles;
 
   if (children) {
-    let cardChildren = [];
+    const cardChildren = [];
     React.Children.map(children, (child) => {
       // TODO not sure displayName is reliable in prod... hmmm..
       const hasType = (typeof child.type === 'function'); // divs or whatever would just be 'div'

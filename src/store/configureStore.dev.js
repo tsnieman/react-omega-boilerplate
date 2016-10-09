@@ -12,6 +12,7 @@ import rootReducer from 'reducers';
 
 // Sagas
 import rootSaga from 'sagas';
+
 const sagaMiddleware = createSagaMiddleware();
 
 export default function configureStore(initialState) {

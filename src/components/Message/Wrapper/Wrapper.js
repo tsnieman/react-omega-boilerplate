@@ -37,7 +37,7 @@ const Wrapper = (props) => {
   delete cleanProps.variant; // Message-specific
 
   if (children) {
-    let messageChildren = [];
+    const messageChildren = [];
     React.Children.map(children, (child) => {
       // TODO not sure displayName is reliable in prod... hmmm..
       const hasType = (typeof child.type === 'function'); // divs or whatever would just be 'div'

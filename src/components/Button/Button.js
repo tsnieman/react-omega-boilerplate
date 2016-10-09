@@ -62,11 +62,11 @@ Button.propTypes = {
 
   // Button-specific
   variant: PropTypes.string,
-  disabled: PropTypes.bool,
+  // disabled: PropTypes.bool,
 
   // link-specific
   to: PropTypes.string,
-  href: PropTypes.string,
+  // href: PropTypes.string,
 };
 
 Button.defaultProps = {

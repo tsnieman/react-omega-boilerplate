@@ -1,3 +1,5 @@
+/* global fetch */
+
 export default function fetchHelper(endpoint, options = {}) {
   return fetch(endpoint, options).then((response) => {
     if (response.stats >= 400) {

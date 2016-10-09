@@ -13,7 +13,7 @@ import Checkbox from 'components/Checkbox';
 // import { Link } from 'react-router';
 // import Message from 'components/Message';
 
-const Home = (props) => (
+const Home = ({ createMessage, createErrorMessage }) => (
   <div styleName="page">
     <header styleName="title">
       <h1>Home</h1>
@@ -29,8 +29,8 @@ const Home = (props) => (
         <br />
         <Button variant="positive" disabled>[disabled] button</Button>
         <br />
-        <label>
-          <Checkbox>Checkbox (with a label)</Checkbox>
+        <label htmlFor="test-checkbox">
+          <Checkbox id="test-checkbox">Checkbox (with a label)</Checkbox>
         </label>
       </Card.Body>
 
@@ -51,7 +51,7 @@ const Home = (props) => (
       <Card.Body>
         <p>This is Card.Body text.</p>
         <p>Test 2nd paragraph.</p>
-        <a href="#">Link test</a>
+        <a href="http://google.com/">Link test</a>
       </Card.Body>
 
       <Card.Actions>
@@ -101,12 +101,12 @@ const Home = (props) => (
       <Card.Body>
         <Button
           styleName="create-message-example"
-          onClick={() => props.createMessage('This is an app message!')}
+          onClick={() => createMessage('This is an app message!')}
         >Create an app message</Button>
 
         <Button
           styleName="create-message-example"
-          onClick={() => props.createErrorMessage('This is an app error message!')}
+          onClick={() => createErrorMessage('This is an app error message!')}
           variant="negative"
         >Create an app error message</Button>
       </Card.Body>

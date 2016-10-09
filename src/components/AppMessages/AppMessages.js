@@ -12,7 +12,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const AppMessages = (props) => {
   const {
-    // children,
     className,
     messages,
     removeMessage,
@@ -66,7 +65,6 @@ const AppMessages = (props) => {
 };
 
 AppMessages.propTypes = {
-  children: PropTypes.any,
   className: PropTypes.string,
   messages: PropTypes.array,
   removeMessage: PropTypes.func.isRequired,

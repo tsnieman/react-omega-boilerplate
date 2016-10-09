@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import { ACTIONS as ERRORS_ACTIONS } from 'constants/errors';
 
 // Helpers
@@ -11,3 +13,5 @@ export function trackError(error, options = {}) {
     options,
   };
 }
+
+/* eslint-enable import/prefer-default-export */

@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import { ACTIONS as GITHUB_ACTIONS } from 'constants/github';
 
 export function getUser(username, options = {}) {
@@ -7,3 +9,5 @@ export function getUser(username, options = {}) {
     options,
   };
 }
+
+/* eslint-enable import/prefer-default-export */

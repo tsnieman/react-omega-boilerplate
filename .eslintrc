@@ -5,6 +5,13 @@
     /* no-underscore-dangle disabled because we use mongoose's _id attr at the moment */
     "no-underscore-dangle": 0, // https://github.com/eslint/eslint/blob/master/docs/rules/no-underscore-dangle.md
     "react/jsx-no-target-blank": 2, // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+    "react/jsx-filename-extension": 0, // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+    "react/forbid-prop-types": 0, // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+    "import/imports-first": 0, // 
+    "arrow-parens": 0, // http://eslint.org/docs/rules/arrow-parens
+    "import/no-extraneous-dependencies": 0, // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+    "import/extensions": 0, // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
+    "react/no-unescaped-entities": 0, // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
   },
   "settings": {
     "import/resolver": "webpack",
