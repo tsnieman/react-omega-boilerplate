@@ -4286,11 +4286,9 @@ normalize-url@^1.4.0:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalizr@^2.2.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-2.3.1.tgz#ac12d771ce1fe6a43094c3d828caada4ed9a4540"
-  dependencies:
-    lodash "^4.17.2"
+normalizr@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.0.0.tgz#43099e099c102762f9b270fad02a7ca69620310e"
 
 npmlog@^4.0.1:
   version "4.0.2"
