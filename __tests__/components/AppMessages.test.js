@@ -15,8 +15,7 @@ describe('AppMessages component', function() {
   it('should render null with no props', () => {
     let wrapper = shallow(<AppMessages />);
 
-    // noscript means null when rendered.
-    expect(wrapper.html()).to.equal('<noscript></noscript>');
+    expect(wrapper.html()).to.equal(null);
   });
   */
 

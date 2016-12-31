@@ -9,7 +9,7 @@ describe('Actions component', function() {
     let wrapper = shallow(<Actions />);
 
     // noscript means null when rendered.
-    expect(wrapper.html()).to.equal('<noscript></noscript>');
+    expect(wrapper.html()).to.equal(null);
   });
 
   it('should have .message-actions class', () => {

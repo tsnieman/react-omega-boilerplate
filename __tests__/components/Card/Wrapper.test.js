@@ -13,7 +13,7 @@ describe('Wrapper component', function() {
     let wrapper = shallow(<Wrapper />);
 
     // noscript means null when rendered.
-    expect(wrapper.html()).to.equal('<noscript></noscript>');
+    expect(wrapper.html()).to.equal(null);
   });
 
   it('should have .card-wrapper class', () => {

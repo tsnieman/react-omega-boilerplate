@@ -9,7 +9,7 @@ describe('Body component', function() {
     let wrapper = shallow(<Body />);
 
     // noscript means null when rendered.
-    expect(wrapper.html()).to.equal('<noscript></noscript>');
+    expect(wrapper.html()).to.equal(null);
   });
 
   it('should have .card-body class', () => {
