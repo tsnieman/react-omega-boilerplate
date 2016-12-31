@@ -29,7 +29,6 @@ module.exports = {
   postcss: function(webpack) {
     return [
       postcssImport({
-        addDependencyTo: webpack,
         path: [
           './src'
         ],
