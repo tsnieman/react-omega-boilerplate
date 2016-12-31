@@ -3,21 +3,19 @@ import cssModules from 'react-css-modules';
 import styles from './Root.css';
 
 // Components
-import { Router } from 'react-router';
+import App from 'components/App';
 import { Provider } from 'react-redux';
-import routes from 'routes';
 
-const Root = ({ history, store }) => (
+const Root = ({ store }) => (
   <Provider store={store}>
     <div styleName="wrapper">
-      <Router history={history} routes={routes} />
+      <App />
     </div>
   </Provider>
 );
 
 Root.propTypes = {
   store: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
 };
 
 export default cssModules(Root, styles);
