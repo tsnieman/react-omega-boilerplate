@@ -12,18 +12,7 @@ import Redbox from 'redbox-react';
 // Store configuration
 import configureStore from 'store/configureStore';
 
-// Routing
-import { browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
-
 const store = configureStore();
-
-const history = syncHistoryWithStore(browserHistory, store, {
-  // Because react-router-redux expects top-level 'routing'
-  // (i.e. state.routing) in the redux store. This app is
-  // configured with that nested in state.app.routing.
-  selectLocationState: (state) => state.app.routing,
-});
 
 const rootEl = document.getElementById('root');
 
@@ -31,7 +20,6 @@ ReactDOM.render(
   <AppContainer errorReporter={Redbox}>
     <Root
       store={store}
-      history={history}
     />
   </AppContainer>,
   rootEl
@@ -48,7 +36,6 @@ if (module.hot) {
       <AppContainer errorReporter={Redbox}>
         <NextApp
           store={store}
-          history={history}
         />
       </AppContainer>,
       rootEl
