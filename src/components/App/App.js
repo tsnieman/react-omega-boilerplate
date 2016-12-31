@@ -1,5 +1,5 @@
 // Basics
-import React, { PropTypes } from 'react';
+import React from 'react';
 import cssModules from 'react-css-modules';
 
 // TODO eslint-disable is used here because i can't stop the "no duplicate import" bullshit.
@@ -17,22 +17,54 @@ WebFont.load({
 });
 */
 
-const App = (props) => {
-  const {
-    children,
-  } = props;
+// Routing
+import {
+  BrowserRouter,
+  Match,
+  Miss,
+  // Link,
+} from 'react-router';
 
-  return (
+// Pages
+import HomePage from 'containers/pages/Home';
+import AboutPage from 'containers/pages/About';
+
+// Frames
+import StandardPageFrame from 'components/frames/StandardPage';
+import AppHeaderFrame from 'components/frames/AppHeader';
+
+const App = () => (
+  <BrowserRouter>
     <div styleName="app-wrapper">
       <div styleName="app-content">
-        {children}
+        <AppHeaderFrame>
+          <StandardPageFrame>
+            <Match
+              exactly
+              pattern="/"
+              component={HomePage}
+            />
+
+            <Match
+              exactly
+              pattern="/about"
+              component={AboutPage}
+            />
+
+            {/* If none of those match, then a sibling `Miss` will render. */}
+            <Miss
+              component={() => (
+                <div>404!</div>
+              )}
+            />
+          </StandardPageFrame>
+        </AppHeaderFrame>
       </div>
     </div>
-  );
-};
+  </BrowserRouter>
+);
 
 App.propTypes = {
-  children: PropTypes.object,
 };
 
 export default cssModules(App, styles);
